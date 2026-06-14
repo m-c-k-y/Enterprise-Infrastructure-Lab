@@ -21,10 +21,9 @@
 >![](images/vlan-tag.png)
 >	
 >**Why?:**
+> - This provides centralized management making it easier to troubleshoot potential issues in the future.
 >
->**-** *This provides centralized management making it easier to troubleshoot potential issues in the future.*
->
->**-** *Users inside the VM cannot accidentally break VLAN configuration.*
+> - Users inside the VM cannot accidentally break VLAN configuration.
 ---
 <br>
 
@@ -51,8 +50,7 @@ Incoming traffic back to **VLAN10** was getting dropped by the **ISP router** be
 **Added static routes to the ISP router config:** 
 >
 >![](images/ISP-router-static-IP.png)
->
->**-** 192.168.20.100 = VLAN99 SVI
+> - 192.168.20.100 = VLAN99 SVI
 
 <br>
 
@@ -75,60 +73,87 @@ Unfortunately, this **ISP router does NOT provide NAT setting** that can be chan
 
 <br>
 
-#### WHY?:
-   - *The **switch** and **pfSense** will now both be routing to eachother, but both live in different subnets. **VLAN50 (Transit VLAN)** was created as a direct link for both routing devices to communicate.*
+#### Why a transit VLAN?:
+> The **switch and pfSense will now both be routing to eachother**, but both live in different subnets. **VLAN50 (Transit VLAN)** was created as a direct link for both routing devices to communicate.
 
-#### VLAN50 = 192.168.150.0/30
-   **Why /30?:**
-   - *Only the **pfSense gateway (192.168.150.1)** and the **switch's new gateway (192.168.150.2)** will be on this **VLAN**, meaning only 2 host addresses are needed.*
+<br>
+
+### VLAN50 = 192.168.150.0/30
+**Why /30?:**
+> Only the **pfSense gateway (192.168.150.1)** and the **switch's VLAN50 SVI (192.168.150.2)** will be on this VLAN, meaning **only 2 host addresses are needed**.
+
+<br>
 
 **VLAN50 created:**
-	![](images/VLAN50-created.png)
+
+> ![](images/VLAN50-created.png)
 
 **Switch's VLAN50 SVI:**
-	![](images/VLAN50-SVI.png)
+
+> ![](images/VLAN50-SVI.png)
 	
 **Switch's new default gateway (pfSense):**
-	![](images/switch-default-gateway.png)
+
+> ![](images/switch-default-gateway.png)
 
 
 **Two NICs were added to the pfSense VM:**
-	![](images/2nics-pfsenseVM.png)
-		**net0 = *WAN***
-		**net1 = *LAN (VLAN traffic)***
-			**-** ***net0** was left without a **VLAN tag** since all untagged **WAN** traffic will be going through the **native VLAN (VLAN99)**.*
-	**pfSense WAN and LAN assignment:**
-		![](images/pfsense-wan-lan.png)
 
+> ![](images/2nics-pfsenseVM.png)
+> 
+> - **net0** = WAN
+> - **net1** = LAN (VLAN traffic)
+> 
+> **net0 was left without a VLAN tag** since all **untagged WAN traffic** will be going through the **native VLAN (VLAN99)**.
+> 
+**pfSense WAN and LAN assignment:**
 
-### ==Step 4==: Set up pfSense static routes and NAT rules:
+> ![](images/pfsense-wan-lan.png)
 
+---
+<br>
+
+### <mark>Step 4</mark>: Set up pfSense static routes and NAT rules:
+
+<br>
 
 **Temporary "Allow Any" rule added to the LAN firewall in pfSense:**
-	![](images/allow-any-rule-vlan50.png)
-		**-** *This would ensure all traffic could cross over the **transit VLAN (VLAN50)**.*
+
+> ![](images/allow-any-rule-vlan50.png)
+> - This would ensure all traffic could cross over the **transit VLAN (VLAN50)**.
 
 **Successful ping test from the switch to pfSense:**
-	![](images/pingtest-switch-pfsense.png)
+
+> ![](images/pingtest-switch-pfsense.png)
 
 
 **Static routes added for VLAN10 and VLAN20:**
-	![](images/static-routes-vlan10-vlan20.png)
-		**-** *Without these, **pfSense** wouldn't know where to send traffic to for either subnet.*
+
+> ![](images/static-routes-vlan10-vlan20.png)
+> - Without these, **pfSense** wouldn't know where to send traffic to for either subnet.
 	
 **Outbound NAT rules created for both VLANs:**
-	![](images/nat-rules-vlans.png)
-		**-** *This resolves the original issue by allowing **pfSense** to perform **outbound NAT** for the **VLAN networks** before forwarding traffic to the **ISP router**.
 
+> ![](images/nat-rules-vlans.png)
+> - This resolves the original issue by allowing **pfSense to perform outbound NAT** for the **VLAN networks** before forwarding traffic to the **ISP router**.
 
-#### Result:
-   - **The Domain Controller had been successfully migrated to VLAN10 and traffic was able to reach beyond the ISP router without being dropped.**
-   **DC ping test:**
-	   ![](images/dc-ping-test-vlan10.png)
+<br>
 
-   **DC DNS test:**
-	   ![](images/dc-dns-test-vlan10.png)
-	   
+### 🟩 Result:
 
-### Updated traffic flow:
-![](images/vlan50-traffic-flow.png)
+The **Domain Controller had been successfully migrated to VLAN10**, and traffic was now able to reach beyond the ISP router without being dropped.
+
+**Successful DC ping test:**
+
+> ![](images/dc-ping-test-vlan10.png)
+
+**Successful DC DNS test:**
+
+> ![](images/dc-dns-test-vlan10.png)
+
+--- 
+<br>
+
+### <mark>Updated traffic flow</mark>:
+
+> ![](images/vlan50-traffic-flow.png)
