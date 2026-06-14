@@ -1,29 +1,40 @@
-# VLAN Migration
+ # VLAN Migration
+
+
+### Goal:
+   - Successfully move the Domain Controller over to VLAN10 (192.168.110.0/24)
+
 ---
 
-## Goal:
-   - **Successfully move the Domain Controller over to VLAN10 (192.168.110.0/24)
+<br>
 
----
+### <mark>Step 1</mark>: Prepare Proxmox and pfSense for VLAN migration:
 
-### <mark>Step 1<mark>: Prepare Proxmox and pfSense for VLAN migration:
-
+<br>
 
 **Made the Proxmox bridge VLAN-aware:**
-	![](images/vlan-aware.png)
+>
+>![](images/vlan-aware.png)
 
 **Set the VLAN tag directly to the VM instead of the VirtIO adapter inside Windows:**
-	![](images/vlan-tag.png)
-		**Why?:**
-			**-** *This provides centralized management making it easier to troubleshoot potential issues in the future.*
-			**-** *Users inside the VM cannot accidentally break VLAN configuration.*
+>
+>![](images/vlan-tag.png)
+>	
+>**Why?:**
+>
+>**-** *This provides centralized management making it easier to troubleshoot potential issues in the future.*
+>
+>**-** *Users inside the VM cannot accidentally break VLAN configuration.*
 
+<br>
 
-### ==Step 2==: Start the migration process:
+### <mark>Step 2</mark>: Start the migration process:
 
+<br><br>
 
 **Manually assigned the Domain Controller an address of 192.168.110.10:**
-	![](images/manual-dc-ip-vlan10.png)
+
+![](images/manual-dc-ip-vlan10.png)
 
 #### ==Problem #1==:
    - **Upon moving the Domain Controller to VLAN10, all reachibility to addresses outside of VLAN10 was lost.**
