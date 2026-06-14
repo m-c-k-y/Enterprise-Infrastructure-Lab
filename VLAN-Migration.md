@@ -25,45 +25,55 @@
 >**-** *This provides centralized management making it easier to troubleshoot potential issues in the future.*
 >
 >**-** *Users inside the VM cannot accidentally break VLAN configuration.*
-
+---
 <br>
 
 ### <mark>Step 2</mark>: Start the migration process:
 
-<br><br>
+<br>
 
 **Manually assigned the Domain Controller an address of 192.168.110.10:**
 
-![](images/manual-dc-ip-vlan10.png)
-
-#### ==Problem #1==:
-   - **Upon moving the Domain Controller to VLAN10, all reachibility to addresses outside of VLAN10 was lost.**
-
-   **Ping test from Domain Controller:**
-	   ![](images/failed-ping-from-vlan10.png)
-
-#### Theory:
-   - *Incoming traffic back to **VLAN10** was getting dropped by the **ISP router** because it didn't know where **192.168.110.10 (Domain Controller's address)** was.*
-
-#### Solution:
-   - **Added static routes to the ISP router config:**
-		![](images/ISP-router-static-IP.png)
-			**- *192.168.20.100 = VLAN99 SVI***
+>![](images/manual-dc-ip-vlan10.png)
 
 
-#### ==Problem #2==:
-   - **Using tracert, we see that traffic has no trouble reaching the ISP router, however after that, the traffic is dropped:**
-		![](images/tracert-fail.png)
+#### 🟥 Problem #1:
+Upon moving **the Domain Controller** to **VLAN10**, all reachibility to addresses outside of VLAN10 was lost.
 
-#### Updated theory:
-   - *Since setting static routes for **VLAN10** and **VLAN20** didn't resolve the problem, the issue is likely occurring **beyond the router**. This may suggest that the **ISP router** is unable or unwilling to **NAT** traffic from **VLAN10**, preventing traffic from finding its way back to the **Domain Controller**.*
+**Ping test from Domain Controller:**
+>  
+>![](images/failed-ping-from-vlan10.png)
+
+#### 🟨 Theory:
+Incoming traffic back to **VLAN10** was getting dropped by the **ISP router** because it didn't know where **192.168.110.10 (Domain Controller's address)** was.
+
+#### 🟩 Solution:
+**Added static routes to the ISP router config:** 
+>
+>![](images/ISP-router-static-IP.png)
+>
+>**-** 192.168.20.100 = VLAN99 SVI
+
+<br>
+
+#### 🟥 Problem #2:
+**Using tracert, we see that traffic has no trouble reaching the ISP router, however after that, the traffic is dropped:**
+>
+>![](images/tracert-fail.png)
+
+#### 🟨 Updated theory:
+Since setting static routes for **VLAN10 and VLAN20** did NOT resolve the problem, the issue is likely occurring **beyond the router**. This may suggest that the **ISP router is unable or unwilling to NAT traffic** from VLAN10, preventing traffic from finding its way back to **the Domain Controller**.
 
 
-### Solution/Change of plan:
-   - *Unfortunately, this **ISP router** does NOT provide **NAT** setting that can be changed in order to resolve this issue. Because of this, **pfSense** will be reintroduced as an edge router while still having the **switch** handle all **inter-VLAN routing**.*
+### 🟩 Solution/Change of plan:
+Unfortunately, this **ISP router does NOT provide NAT setting** that can be changed in order to resolve this issue. Because of this, **pfSense will be reintroduced as an edge router** while still having the switch handle all inter-VLAN routing.
 
+---
+<br>
 
-### ==Step 3==: Create and configure a transit VLAN:
+### <mark>Step 3</mark>: Create and configure a transit VLAN:
+
+<br>
 
 #### WHY?:
    - *The **switch** and **pfSense** will now both be routing to eachother, but both live in different subnets. **VLAN50 (Transit VLAN)** was created as a direct link for both routing devices to communicate.*
