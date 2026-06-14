@@ -6,7 +6,7 @@
 
 ---
 
-### ==Step 1==: Prepare Proxmox and pfSense for VLAN migration:
+### <mark>Step 1<mark>: Prepare Proxmox and pfSense for VLAN migration:
 
 
 **Made the Proxmox bridge VLAN-aware:**
