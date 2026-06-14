@@ -14,11 +14,11 @@
 
 **Made the Proxmox bridge VLAN-aware:**
 >
->![](images/vlan-aware.png)
+> <img src="images/vlan-aware.png" width="600">
 
 **Set the VLAN tag directly to the VM instead of the VirtIO adapter inside Windows:**
 >
->![](images/vlan-tag.png)
+> <img src="images/vlan-tag.png" width="600">
 >	
 >**Why?:**
 > - This provides centralized management making it easier to troubleshoot potential issues in the future.
@@ -33,7 +33,7 @@
 
 **Manually assigned the Domain Controller an address of 192.168.110.10:**
 
->![](images/manual-dc-ip-vlan10.png)
+> <img src="images/manual-dc-ip-vlan10.png" width="600">
 
 
 #### 🟥 Problem #1:
@@ -41,7 +41,7 @@ Upon moving **the Domain Controller** to **VLAN10**, all reachibility to address
 
 **Ping test from Domain Controller:**
 >  
->![](images/failed-ping-from-vlan10.png)
+> <img src="images/failed-ping-from-vlan10.png" width="600">
 
 #### 🟨 Theory:
 Incoming traffic back to **VLAN10** was getting dropped by the **ISP router** because it didn't know where **192.168.110.10 (Domain Controller's address)** was.
@@ -49,7 +49,8 @@ Incoming traffic back to **VLAN10** was getting dropped by the **ISP router** be
 #### 🟩 Solution:
 **Added static routes to the ISP router config:** 
 >
->![](images/ISP-router-static-IP.png)
+> <img src="images/ISP-router-static-IP.png" width="600">
+>
 > - 192.168.20.100 = VLAN99 SVI
 
 <br>
@@ -57,7 +58,7 @@ Incoming traffic back to **VLAN10** was getting dropped by the **ISP router** be
 #### 🟥 Problem #2:
 **Using tracert, we see that traffic has no trouble reaching the ISP router, however after that, the traffic is dropped:**
 >
->![](images/tracert-fail.png)
+> <img src="images/tracert-fail.png" width="600">
 
 #### 🟨 Updated theory:
 Since setting static routes for **VLAN10 and VLAN20** did NOT resolve the problem, the issue is likely occurring **beyond the router**. This may suggest that the **ISP router is unable or unwilling to NAT traffic** from VLAN10, preventing traffic from finding its way back to **the Domain Controller**.
@@ -86,20 +87,20 @@ Unfortunately, this **ISP router does NOT provide NAT setting** that can be chan
 
 **VLAN50 created:**
 
-> ![](images/VLAN50-created.png)
+> <img src="images/VLAN50-created.png" width="600">
 
 **Switch's VLAN50 SVI:**
 
-> ![](images/VLAN50-SVI.png)
+> <img src="images/VLAN50-SVI.png" width="600">
 	
 **Switch's new default gateway (pfSense):**
 
-> ![](images/switch-default-gateway.png)
+> <img src="images/switch-default-gateway.png" width="600">
 
 
 **Two NICs were added to the pfSense VM:**
 
-> ![](images/2nics-pfsenseVM.png)
+> <img src="images/2nics-pfsenseVM.png" width="600">
 > 
 > - **net0** = WAN
 > - **net1** = LAN (VLAN traffic)
@@ -108,7 +109,7 @@ Unfortunately, this **ISP router does NOT provide NAT setting** that can be chan
 > 
 **pfSense WAN and LAN assignment:**
 
-> ![](images/pfsense-wan-lan.png)
+> <img src="images/pfsense-wan-lan.png" width="600">
 
 ---
 <br>
@@ -119,22 +120,25 @@ Unfortunately, this **ISP router does NOT provide NAT setting** that can be chan
 
 **Temporary "Allow Any" rule added to the LAN firewall in pfSense:**
 
-> ![](images/allow-any-rule-vlan50.png)
+> <img src="images/allow-any-rule-vlan50.png" width="600">
+>
 > - This would ensure all traffic could cross over the **transit VLAN (VLAN50)**.
 
 **Successful ping test from the switch to pfSense:**
 
-> ![](images/pingtest-switch-pfsense.png)
+> <img src="images/pingtest-switch-pfsense.png" width="600">
 
 
 **Static routes added for VLAN10 and VLAN20:**
 
-> ![](images/static-routes-vlan10-vlan20.png)
+> <img src="images/static-routes-vlan10-vlan20.png" width="600">
+>
 > - Without these, **pfSense** wouldn't know where to send traffic to for either subnet.
 	
 **Outbound NAT rules created for both VLANs:**
 
-> ![](images/nat-rules-vlans.png)
+> <img src="images/nat-rules-vlans.png" width="600">
+>
 > - This resolves the original issue by allowing **pfSense to perform outbound NAT** for the **VLAN networks** before forwarding traffic to the **ISP router**.
 
 <br>
@@ -145,15 +149,16 @@ The **Domain Controller had been successfully migrated to VLAN10**, and traffic 
 
 **Successful DC ping test:**
 
-> ![](images/dc-ping-test-vlan10.png)
+> <img src="images/dc-ping-test-vlan10.png" width="600">
 
 **Successful DC DNS test:**
 
-> ![](images/dc-dns-test-vlan10.png)
+> <img src="images/dc-dns-test-vlan10.png" width="600">
 
 --- 
 <br>
 
 ### <mark>Updated traffic flow</mark>:
+<br>
 
-> ![](images/vlan50-traffic-flow.png)
+> <img src="images/vlan50-traffic-flow.png" width="250">
