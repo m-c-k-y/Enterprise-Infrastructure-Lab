@@ -65,7 +65,7 @@
 
 > <img src="images/windows-server-setup/virtiodrive.png" width="600">
 >
-> ![](images/windows-server-setup/vioscsi1.png)![](images/windows-server-setup/2k22.png)![](images/windows-server-setup/amd64.png)
+> <img src="images/windows-server-setup/vioscsi1.png" width="200"><img src="images/windows-server-setup/2k22.png" width="200"><img src="images/windows-server-setup/amd64.png" width="200">
 > 
 > <img src="images/windows-server-setup/unallocated-space.png" width="600">
 > 
@@ -83,11 +83,9 @@
 **Install VirtIO network driver:**
 > <img src="images/windows-server-setup/updatenetworkdriver.png" width="600">
 > 
-> <img src="images/windows-server-setup/networkdriver1.png" width="600">
+> <img src="images/windows-server-setup/networkdriver1.png" width="200"><img src="images/windows-server-setup/networkdriver2.png" width="200"><img src="images/windows-server-setup/networkdriver3.png" width="200">
 > 
-> <img src="images/windows-server-setup/networkdriver2.png" width="600">
-> 
-> <img src="images/windows-server-setup/networkdriver3.png" width="600">
+
 	   
 **VirtIO network driver successfully installed:**
 > <img src="images/windows-server-setup/networkdriversuccess.png" width="600">
