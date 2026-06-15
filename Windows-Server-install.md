@@ -1,7 +1,7 @@
 # Windows Server Install + Set Up
----
 
-## GOAL:
+
+### GOAL:
    - Create and configure a ***Windows Server*** virtual machine that will take the role of the ***Domain Controller*** in the ***Active Directory*** environment.
 
 ---
