@@ -69,7 +69,7 @@
 > 
 > ![](images/windows-server-setup/unallocated-space.png)
 > 
-**After loading the VirtIO storage driver from the attached VirtIO ISO, Windows Server was able to detect the virtual disk and installation could proceed as normal.**
+> - **After loading the VirtIO storage driver from the attached VirtIO ISO, Windows Server was able to detect the virtual disk and installation could proceed as normal.**
 
 <br>
 
