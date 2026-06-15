@@ -50,17 +50,23 @@
 
 <br>
 
-###### VirtIO:
-   - VirtIO is a set of drivers designed for virtual machines. It allows the VM to communicate more efficiently with Proxmox than traditional emulated hardware, resulting in better performance.The downside is that Windows Server does not recognize it out of the box, so the VirtIO driver ISO will have to be attached during installation.
+#### VirtIO:
+   - **VirtIO** is a set of drivers designed for virtual machines. It allows the VM to communicate more efficiently with Proxmox than traditional emulated hardware, resulting in better performance. The downside is that **Windows Server does not recognize it out of the box**, so the **VirtIO driver ISO** will have to be attached during installation.
 
-   **Attach VirtIO ISO:**
-	   ![](images/windows-server-setup/virtio-attach.png)
+<br>
+
+**Attach VirtIO ISO:**
+> ![](images/windows-server-setup/virtio-attach.png)
 	   
-   **Load VirtIO storage driver:**
-	   ![](images/windows-server-setup/loaddriver.png)
-		   ***- Windows Server could not detect a virtual disk because the VirtIO storage drivers are not included by default.***
-	   ![](images/windows-server-setup/virtiodrive.png)
-	   ![](images/windows-server-setup/vioscsi1.png)![](images/windows-server-setup/2k22.png)![](images/windows-server-setup/amd64.png)
+**Load VirtIO storage driver:**
+> ![](images/windows-server-setup/loaddriver.png)
+> 
+**Windows Server could not detect a virtual disk because the VirtIO storage drivers are not included by default.**
+
+> ![](images/windows-server-setup/virtiodrive.png)
+
+> ![](images/windows-server-setup/vioscsi1.png)![](images/windows-server-setup/2k22.png)![](images/windows-server-setup/amd64.png)
+> 
 	   ![](images/windows-server-setup/unallocated-space.png)
 		   ***- After loading the VirtIO storage driver from the attached VirtIO ISO, Windows Server was able to detect the virtual disk and installation could proceed as normal.***
 
