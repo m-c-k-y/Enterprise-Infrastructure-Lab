@@ -106,9 +106,10 @@
 **DNS server: *192.168.50.10 (Domain Controller itself)***
 > ![](images/windows-server-setup/dnsserverDC.png)
 > 
-> - The Domain Controller was configured to use itself as its DNS server, as Active Directory relies on DNS for service discovery and authentication. External DNS requests would later be forwarded upstream as required.
+> - **The Domain Controller was configured to use itself as its DNS server, as Active Directory relies on DNS for service discovery and authentication. External DNS requests would later be forwarded upstream as required.**
 
-** Verification:**
-	   ![](images/windows-server-setup/DC-Verification.png)
-		   *- The network configuration was verified using **ipconfig /all**.*
+**Verification:**
+> ![](images/windows-server-setup/DC-Verification.png)
+> 
+> - **The network configuration was verified using *ipconfig /all.***
 	   
