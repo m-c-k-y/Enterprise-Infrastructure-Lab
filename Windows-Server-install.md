@@ -20,24 +20,35 @@
 **OS:**
 > ![](images/windows-server-setup/ISOattach.png)
 >
->**ISO image:** Windows Server 2022
+> - **ISO image:** Windows Server 2022
 
-   **Disk:** 
-   ![](images/windows-server-setup/VMdisk.png)
-	**Disk size:** 40GB
-   **CPU:** 
-   ![](images/windows-server-setup/CPU-cores.png)
-	**Cores:** 2
-	**Type:** host
-   **Memory:**
-   ![](images/windows-server-setup/serverVM-memory.png)
-	**MiB:** 4GB
-   **Network:**
-   ![](images/windows-server-setup/VMnetwork.png)
-	**Bridge:** vmbr0
-	**Virtual network card:** VirtIO
+**Disk:** 
+> ![](images/windows-server-setup/VMdisk.png)
+> 
+> - **Disk size:** 40GB
 
-### ==Step 2==: Attach VirtIO ISO and load storage driver:
+ **CPU:** 
+> ![](images/windows-server-setup/CPU-cores.png)
+> 
+> - **Cores:** 2
+> - **Type:** host
+
+**Memory:**
+> ![](images/windows-server-setup/serverVM-memory.png)
+> 
+> - **MiB:** 4GB
+
+**Network:**
+> ![](images/windows-server-setup/VMnetwork.png)
+> 
+> - **Bridge:** vmbr0
+> - **Virtual network card:** VirtIO
+
+<br>
+
+### <mark>Step 2</mark>: Attach VirtIO ISO and load storage driver:
+
+<br>
 
 ###### VirtIO:
    - VirtIO is a set of drivers designed for virtual machines. It allows the VM to communicate more efficiently with Proxmox than traditional emulated hardware, resulting in better performance.The downside is that Windows Server does not recognize it out of the box, so the VirtIO driver ISO will have to be attached during installation.
