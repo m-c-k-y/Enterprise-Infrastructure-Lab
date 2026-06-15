@@ -77,29 +77,38 @@
 
 <br>
 
-   ***The Server was renamed to DC01 to identify it as the first Domain Controller in the environment:***
-	   ![](images/windows-server-setup/dcnamechange.png)
+**The Server was renamed to DC01 to identify it as the first Domain Controller in the environment:**
+> ![](images/windows-server-setup/dcnamechange.png)
 
-   **Install VirtIO network driver:**
-	   ![](images/windows-server-setup/updatenetworkdriver.png)
-	   ![](images/windows-server-setup/networkdriver1.png)
-	   ![](images/windows-server-setup/networkdriver2.png)
-	   ![](images/windows-server-setup/networkdriver3.png)
+**Install VirtIO network driver:**
+> ![](images/windows-server-setup/updatenetworkdriver.png)
+> 
+> ![](images/windows-server-setup/networkdriver1.png)
+> 
+> ![](images/windows-server-setup/networkdriver2.png)
+> 
+> ![](images/windows-server-setup/networkdriver3.png)
 	   
-   **VirtIO network driver successfully installed:**
-	   ![](images/windows-server-setup/networkdriversuccess.png)
+**VirtIO network driver successfully installed:**
+> ![](images/windows-server-setup/networkdriversuccess.png)
+
+<br>
 
 ### ==Step 4==: Configure Static IP:
 
-   **Domain Controller static IP: *192.168.50.10***
-   **Subnet: *192.168.50.0/24***
-	   ![](images/windows-server-setup/staticIP1.png)
+<br>
 
-   **DNS server: *192.168.50.10 (Domain Controller itself)***
-	   ![](images/windows-server-setup/dnsserverDC.png)
-		   *- The Domain Controller was configured to use itself as its DNS server, as Active Directory relies on DNS for service discovery and authentication. External DNS requests would later be forwarded upstream as required.*
+**Domain Controller static IP: *192.168.50.10***
 
-   Verification:
+**Subnet: *192.168.50.0/24***
+> ![](images/windows-server-setup/staticIP1.png)
+
+**DNS server: *192.168.50.10 (Domain Controller itself)***
+> ![](images/windows-server-setup/dnsserverDC.png)
+> 
+> - The Domain Controller was configured to use itself as its DNS server, as Active Directory relies on DNS for service discovery and authentication. External DNS requests would later be forwarded upstream as required.
+
+** Verification:**
 	   ![](images/windows-server-setup/DC-Verification.png)
 		   *- The network configuration was verified using **ipconfig /all**.*
 	   
