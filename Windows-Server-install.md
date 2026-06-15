@@ -6,7 +6,11 @@
 
 ---
 
-### ==Step 1==: Create virtual machine and attach Windows Server ISO:
+<br>
+
+### <mark>Step 1</mark>: Create virtual machine and attach Windows Server ISO:
+
+<br>
 
    ![](images/windows-server-setup/DC-VM-name.png)
 	**VM Name:** DC01
