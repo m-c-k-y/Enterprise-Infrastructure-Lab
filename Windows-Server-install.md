@@ -94,7 +94,7 @@
 
 <br>
 
-### ==Step 4==: Configure Static IP:
+### <mark>Step 4</mark>: Configure Static IP:
 
 <br>
 
