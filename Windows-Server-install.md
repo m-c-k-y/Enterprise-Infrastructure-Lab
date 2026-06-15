@@ -12,11 +12,16 @@
 
 <br>
 
-   ![](images/windows-server-setup/DC-VM-name.png)
-	**VM Name:** DC01
-		- ***DC01** was chosen because this machine would become the **Domain Controller** for the **Active Directory** environment.*
-   **OS:**![](images/windows-server-setup/ISOattach.png)
-	**ISO image:** Windows Server 2022
+**VM Name:** DC01
+> ![](images/windows-server-setup/DC-VM-name.png)
+>
+> - DC01 was chosen because this machine would become the **Domain Controller** for the **Active Directory** environment.*
+
+**OS:**
+> ![](images/windows-server-setup/ISOattach.png)
+>
+>**ISO image:** Windows Server 2022
+
    **Disk:** 
    ![](images/windows-server-setup/VMdisk.png)
 	**Disk size:** 40GB
