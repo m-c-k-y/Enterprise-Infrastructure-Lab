@@ -64,13 +64,18 @@
 **Windows Server could not detect a virtual disk because the VirtIO storage drivers are not included by default.**
 
 > ![](images/windows-server-setup/virtiodrive.png)
-
+>
 > ![](images/windows-server-setup/vioscsi1.png)![](images/windows-server-setup/2k22.png)![](images/windows-server-setup/amd64.png)
 > 
-	   ![](images/windows-server-setup/unallocated-space.png)
-		   ***- After loading the VirtIO storage driver from the attached VirtIO ISO, Windows Server was able to detect the virtual disk and installation could proceed as normal.***
+> ![](images/windows-server-setup/unallocated-space.png)
+> 
+**After loading the VirtIO storage driver from the attached VirtIO ISO, Windows Server was able to detect the virtual disk and installation could proceed as normal.**
 
-### ==Step 3==: Initial Windows Server configuration:
+<br>
+
+### <mark>Step 3</mark>: Initial Windows Server configuration:
+
+<br>
 
    ***The Server was renamed to DC01 to identify it as the first Domain Controller in the environment:***
 	   ![](images/windows-server-setup/dcnamechange.png)
