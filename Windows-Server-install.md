@@ -13,7 +13,7 @@
 <br>
 
 **VM Name:** DC01
-> <img src="images/windows-server-setup/DC-VM-name.png" width="600>
+> <img src="images/windows-server-setup/DC-VM-name.png" width="600">
 >
 > - **DC01 was chosen because this machine would become the *Domain Controller* for the *Active Directory* environment.**
 
