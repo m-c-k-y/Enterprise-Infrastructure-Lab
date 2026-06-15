@@ -18,28 +18,28 @@
 > - **DC01 was chosen because this machine would become the *Domain Controller* for the *Active Directory* environment.**
 
 **OS:**
-> ![](images/windows-server-setup/ISOattach.png)
+> <img src="images/windows-server-setup/ISOattach.png" width="600">
 >
 > - **ISO image:** Windows Server 2022
 
 **Disk:** 
-> ![](images/windows-server-setup/VMdisk.png)
+> <img src="images/windows-server-setup/VMdisk.png" width="600">
 > 
 > - **Disk size:** 40GB
 
  **CPU:** 
-> ![](images/windows-server-setup/CPU-cores.png)
+> <img src="images/windows-server-setup/CPU-cores.png" width="600">
 > 
 > - **Cores:** 2
 > - **Type:** host
 
 **Memory:**
-> ![](images/windows-server-setup/serverVM-memory.png)
+> <img src="images/windows-server-setup/serverVM-memory.png" width="600">
 > 
 > - **MiB:** 4GB
 
 **Network:**
-> ![](images/windows-server-setup/VMnetwork.png)
+> <img src="images/windows-server-setup/VMnetwork.png" width="600">
 > 
 > - **Bridge:** vmbr0
 > - **Virtual network card:** VirtIO
@@ -56,18 +56,18 @@
 <br>
 
 **Attach VirtIO ISO:**
-> ![](images/windows-server-setup/virtio-attach.png)
+> <img src="images/windows-server-setup/virtio-attach.png" width="600">
 	   
 **Load VirtIO storage driver:**
-> ![](images/windows-server-setup/loaddriver.png)
+> <img src="images/windows-server-setup/loaddriver.png" width="600">
 > 
 **Windows Server could not detect a virtual disk because the VirtIO storage drivers are not included by default.**
 
-> ![](images/windows-server-setup/virtiodrive.png)
+> <img src="images/windows-server-setup/virtiodrive.png" width="600">
 >
 > ![](images/windows-server-setup/vioscsi1.png)![](images/windows-server-setup/2k22.png)![](images/windows-server-setup/amd64.png)
 > 
-> ![](images/windows-server-setup/unallocated-space.png)
+> <img src="images/windows-server-setup/unallocated-space.png" width="600">
 > 
 > - **After loading the VirtIO storage driver from the attached VirtIO ISO, Windows Server was able to detect the virtual disk and installation could proceed as normal.**
 
@@ -78,19 +78,19 @@
 <br>
 
 **The Server was renamed to DC01 to identify it as the first Domain Controller in the environment:**
-> ![](images/windows-server-setup/dcnamechange.png)
+> <img src="images/windows-server-setup/dcnamechange.png" width="600">
 
 **Install VirtIO network driver:**
-> ![](images/windows-server-setup/updatenetworkdriver.png)
+> <img src="images/windows-server-setup/updatenetworkdriver.png" width="600">
 > 
-> ![](images/windows-server-setup/networkdriver1.png)
+> <img src="images/windows-server-setup/networkdriver1.png" width="600">
 > 
-> ![](images/windows-server-setup/networkdriver2.png)
+> <img src="images/windows-server-setup/networkdriver2.png" width="600">
 > 
-> ![](images/windows-server-setup/networkdriver3.png)
+> <img src="images/windows-server-setup/networkdriver3.png" width="600">
 	   
 **VirtIO network driver successfully installed:**
-> ![](images/windows-server-setup/networkdriversuccess.png)
+> <img src="images/windows-server-setup/networkdriversuccess.png" width="600">
 
 <br>
 
@@ -101,15 +101,15 @@
 **Domain Controller static IP: *192.168.50.10***
 
 **Subnet: *192.168.50.0/24***
-> ![](images/windows-server-setup/staticIP1.png)
+> <img src="images/windows-server-setup/staticIP1.png" width="600">
 
 **DNS server: *192.168.50.10 (Domain Controller itself)***
-> ![](images/windows-server-setup/dnsserverDC.png)
+> <img src="images/windows-server-setup/dnsserverDC.png" width="600">
 > 
 > - **The Domain Controller was configured to use itself as its DNS server, as Active Directory relies on DNS for service discovery and authentication. External DNS requests would later be forwarded upstream as required.**
 
 **Verification:**
-> ![](images/windows-server-setup/DC-Verification.png)
+> <img src="images/windows-server-setup/DC-Verification.png" width="600">
 > 
 > - **The network configuration was verified using *ipconfig /all.***
 	   
