@@ -15,7 +15,7 @@
 **VM Name:** DC01
 > ![](images/windows-server-setup/DC-VM-name.png)
 >
-> - DC01 was chosen because this machine would become the **Domain Controller** for the **Active Directory** environment.*
+> - **DC01 was chosen because this machine would become the *Domain Controller* for the *Active Directory* environment.**
 
 **OS:**
 > ![](images/windows-server-setup/ISOattach.png)
