@@ -72,27 +72,27 @@
 
 ### 🟩 Solution:
 
-1. Manually set the client's clock "close enough" to the *Domain Controller's* time so that it falls within the synchronization threshold.
+**1. Manually set the client's clock "close enough" to the Domain Controller's time so that it falls within the synchronization threshold.**
       
- 2. Configured the client to use the Active Directory domain hierachy:
+**2. Configured the client to use the Active Directory domain hierachy:**
 >      
 > <img src="images/NTP/client-domain-hierachy.png" width="600">
 >
- 3. Established the client as a non-reliable time source:
+**3. Established the client as a non-reliable time source:**
 > 
 > <img src="images/NTP/client-non-reliable.png" width="600">
 >
 > - Only the Domain Controller should be configured as reliable time source.
 >
- 4. Restarted the Windows Time service:
+**4. Restarted the Windows Time service:**
 >
 > <img src="images/NTP/client-restart-time-service.png" width="600">
 >
- 5. Rediscovered time sources and synchronized:
+**5. Rediscovered time sources and synchronized:**
 >
 > <img src="images/NTP/rediscover-sync.png" width="600">
 >
- 6. Verified client's time source:
+**6. Verified client's time source:**
 >
 > <img src="images/NTP/client-verify.png" width="600">
 
