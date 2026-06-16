@@ -1,7 +1,6 @@
 # Active Directory Domain Service (AD DS) installation
----
 
-## GOAL: 
+### Goal: 
    - Install ***Active Directory Domain Services (AD DS)*** and promote ***DC01*** to a ***Domain Controller***.
 
 ---
