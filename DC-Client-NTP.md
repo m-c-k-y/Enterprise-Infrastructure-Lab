@@ -36,25 +36,32 @@
 
 
 **Configure the *Domain Controller* as a reliable time source:**
-![](images/NTP/reliable-time-source.png)
-   - ***manualpeerlist* =** External NTP server
-   - ***syncfromflags:manual* =** Use manually specified peers
-   - ***reliable:yes* =** Advertise this DC as a trusted time source to domain clients
-   - ***update* =** Apply configuration changes
-   - ***0x8* =** Synchronize time from this external NTP server
+>
+> ![](images/NTP/reliable-time-source.png)
+>
+> - ***manualpeerlist* =** External NTP server
+> - ***syncfromflags:manual* =** Use manually specified peers
+> - ***reliable:yes* =** Advertise this DC as a trusted time source to domain clients
+> - ***update* =** Apply configuration changes
+> - ***0x8* =** Synchronize time from this external NTP server
 
 **Restart of the Windows Time service:**
-![](images/NTP/restart-time-service.png)
+
+> ![](images/NTP/restart-time-service.png)
 
 **Force synchronization:**
-![](images/NTP/force-sync.png)
+
+> ![](images/NTP/force-sync.png)
 
 **Verification of synchronization to external time source:**
-![](images/NTP/time-source-verify.png)
 
+> ![](images/NTP/time-source-verify.png)
 
-### ==Step 2==: Set the client's time source as the Domain Controller:
+<br>
 
+### <mark>Step 2</mark>: Set the client's time source as the Domain Controller:
+
+<br>
 
 #### Problem:
 - **The client was unable to synchronize to the *Domain Controller* because difference in time exceeded the *Windows Time Service* synchronization threshold:**
