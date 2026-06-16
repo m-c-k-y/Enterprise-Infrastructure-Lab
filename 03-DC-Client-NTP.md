@@ -82,7 +82,7 @@
 > 
 > <img src="images/NTP/client-non-reliable.png" width="600">
 >
-> - Only the Domain Controller should be configured as reliable time source.
+> - **Only the Domain Controller should be configured as reliable time source.**
 >
 **4. Restarted the Windows Time service:**
 >
