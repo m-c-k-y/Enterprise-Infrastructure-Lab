@@ -18,7 +18,7 @@
 
 ***NTP* flow plan:**
 
-> <img src="images/NTP/ntp-flow-plan.png" width="600">
+> <img src="images/NTP/ntp-flow-plan.png" width="500">
 > 
 > - The ***Domain Controller*** synchronizes its time with an external ***NTP*** source. Domain clients then synchronize their time with the ***Domain Controller***. This ensures that all client machines within the same domain will be synced to the same time source, greatly reducing the likelihood of time drift between machines.
 
