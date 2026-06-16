@@ -56,6 +56,7 @@
 **Verification of synchronization to external time source:**
 
 > ![](images/NTP/time-source-verify.png)
+---
 
 <br>
 
