@@ -43,6 +43,7 @@
 > 
 > - **Bridge:** vmbr0
 > - **Virtual network card:** VirtIO
+---
 
 <br>
 
