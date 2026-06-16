@@ -64,21 +64,35 @@
 <br>
 
 #### Problem:
-- **The client was unable to synchronize to the *Domain Controller* because difference in time exceeded the *Windows Time Service* synchronization threshold:**
-	![](images/NTP/failed-sync.png)
+
+**The client was unable to synchronize to the *Domain Controller* because difference in time exceeded the *Windows Time Service* synchronization threshold:**
+>
+> ![](images/NTP/failed-sync.png)
 
 ### Solution:
-   1. **Manually set the client's clock "close enough" to the *Domain Controller's* time so that it falls within the synchronization threshold.**
-   2. **Configured the client to use the *Active Directory domain hierachy*:**
-	   ![](images/NTP/client-domain-hierachy.png)
-   3. **Established the client as a non-reliable time source:**
-	   ![](images/NTP/client-non-reliable.png)
-		   - *Only the **Domain Controller** should be configured as reliable time source.*
-   4. **Restarted the *Windows Time service*:**
-	   ![](images/NTP/client-restart-time-service.png)
-   5. **Rediscovered time sources and synchronized:**
-	   ![](images/NTP/rediscover-sync.png)
-   6. **Verified client's time source:**
-	   ![](images/NTP/client-verify.png)
+
+> 1. Manually set the client's clock "close enough" to the *Domain Controller's* time so that it falls within the synchronization threshold.
+>      
+> 2. Configured the client to use the Active Directory domain hierachy:
+>>      
+>> ![](images/NTP/client-domain-hierachy.png)
+>
+> 3. Established the client as a non-reliable time source:
+>> 
+>> ![](images/NTP/client-non-reliable.png)
+>>
+>> - Only the Domain Controller should be configured as reliable time source.
+>
+> 4. Restarted the Windows Time service:
+>>
+>> ![](images/NTP/client-restart-time-service.png)
+>
+> 5. Rediscovered time sources and synchronized:
+>>
+>> ![](images/NTP/rediscover-sync.png)
+>
+> 6. Verified client's time source:
+>>
+>> ![](images/NTP/client-verify.png)
 
 
