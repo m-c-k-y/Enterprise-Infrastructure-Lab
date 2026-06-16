@@ -11,7 +11,7 @@
 
 <br>
 
-> ![](images/adds-install/add-roles-and-feature.png)
+> <img src="images/adds-install/add-roles-and-feature.png" width="600">
 >
 > ![](images/adds-install/role-based-install.png)
 
