@@ -5,7 +5,11 @@
 
 ---
 
-### ==Step 1==: Install Active Directory Domain Services (AD DS):
+<br>
+
+### <mark>Step 1</mark>: Install Active Directory Domain Services (AD DS):
+
+<br>
 
    ![](images/adds-install/add-roles-and-feature.png)
    ![](images/adds-install/role-based-install.png)
