@@ -64,7 +64,7 @@
 
 <br>
 
-#### Problem:
+#### 🟥 Problem:
 
 **The client was unable to synchronize to the *Domain Controller* because difference in time exceeded the *Windows Time Service* synchronization threshold:**
 >
