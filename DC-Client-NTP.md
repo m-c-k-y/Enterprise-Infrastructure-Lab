@@ -70,7 +70,7 @@
 >
 > <img src="images/NTP/failed-sync.png" width="600">
 
-### Solution:
+### 🟩 Solution:
 
 1. Manually set the client's clock "close enough" to the *Domain Controller's* time so that it falls within the synchronization threshold.
       
