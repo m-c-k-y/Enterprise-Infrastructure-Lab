@@ -18,7 +18,7 @@
 
 ***NTP* flow plan:**
 
-> ![](images/NTP/ntp-flow-plan.png)
+> <img src="images/NTP/ntp-flow-plan.png" width="600">
 > 
 > - The ***Domain Controller*** synchronizes its time with an external ***NTP*** source. Domain clients then synchronize their time with the ***Domain Controller***. This ensures that all client machines within the same domain will be synced to the same time source, greatly reducing the likelihood of time drift between machines.
 
@@ -37,7 +37,7 @@
 
 **Configure the *Domain Controller* as a reliable time source:**
 >
-> ![](images/NTP/reliable-time-source.png)
+> <img src="images/NTP/reliable-time-source.png" width="600">
 >
 > - ***manualpeerlist* =** External NTP server
 > - ***syncfromflags:manual* =** Use manually specified peers
@@ -47,15 +47,15 @@
 
 **Restart of the Windows Time service:**
 
-> ![](images/NTP/restart-time-service.png)
+> <img src="images/NTP/restart-time-service.png" width="600">
 
 **Force synchronization:**
 
-> ![](images/NTP/force-sync.png)
+> <img src="images/NTP/force-sync.png" width="600">
 
 **Verification of synchronization to external time source:**
 
-> ![](images/NTP/time-source-verify.png)
+> <img src="images/NTP/time-source-verify.png" width="600">
 ---
 
 <br>
@@ -68,7 +68,7 @@
 
 **The client was unable to synchronize to the *Domain Controller* because difference in time exceeded the *Windows Time Service* synchronization threshold:**
 >
-> ![](images/NTP/failed-sync.png)
+> <img src="images/NTP/failed-sync.png" width="600">
 
 ### Solution:
 
@@ -76,24 +76,24 @@
       
  2. Configured the client to use the Active Directory domain hierachy:
 >      
-> ![](images/NTP/client-domain-hierachy.png)
+> <img src="images/NTP/client-domain-hierachy.png" width="600">
 >
  3. Established the client as a non-reliable time source:
 > 
-> ![](images/NTP/client-non-reliable.png)
+> <img src="images/NTP/client-non-reliable.png" width="600">
 >
 > - Only the Domain Controller should be configured as reliable time source.
 >
  4. Restarted the Windows Time service:
 >
-> ![](images/NTP/client-restart-time-service.png)
+> <img src="images/NTP/client-restart-time-service.png" width="600">
 >
  5. Rediscovered time sources and synchronized:
 >
-> ![](images/NTP/rediscover-sync.png)
+> <img src="images/NTP/rediscover-sync.png" width="600">
 >
  6. Verified client's time source:
 >
-> ![](images/NTP/client-verify.png)
+> <img src="images/NTP/client-verify.png" width="600">
 
 
