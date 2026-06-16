@@ -1,29 +1,38 @@
 # Domain Controller + Windows Client time sync 
----
 
-## GOAL:
+### Goal:
    - Establish synchronization of time between the ***Domain Controller*** and client machine.
 
 ---
 
 **Purpose of time synchronization in a *Active Directory* environment:**
-	Excessive time drift between a ***Domain Controller*** and client machine can cause:
-		- ***Kerberos*** failures
-		- External service failures
-		- Log timestamp inaccuracy
-	The implementation of ***NTP*** is necessary for providing secure identity verification through ***Kerberos*** tickets as well as ensuring reliability of log data.
-		- ***Kerberos** tickets are time-limited, meaning if there is a mismatch in time between a **Domain Controller** and client, the ticket may no longer be usable even if it should be.*
+
+> Excessive time drift between a ***Domain Controller*** and client machine can cause:
+>> - ***Kerberos*** failures
+>> - External service failures
+>> - Log timestamp inaccuracy
+>
+> The implementation of ***NTP*** is necessary for providing secure identity verification through ***Kerberos*** tickets as well as ensuring reliability of log data.
+> 
+> - ***Kerberos** tickets are time-limited, meaning if there is a mismatch in time between a **Domain Controller** and client, the ticket may no longer be usable even if it should be.*
 
 ***NTP* flow plan:**
-	![](images/NTP/ntp-flow-plan.png)
-		- The ***Domain Controller*** synchronizes its time with an external ***NTP*** source. Domain clients then synchronize their time with the ***Domain Controller***. This ensures that all client machines within the same domain will be synced to the same time source, greatly reducing the likelihood of time drift between machines.
 
-### ==Step 1==: Provide the Domain Controller with an external NTP source:
+> ![](images/NTP/ntp-flow-plan.png)
+> 
+> - The ***Domain Controller*** synchronizes its time with an external ***NTP*** source. Domain clients then synchronize their time with the ***Domain Controller***. This ensures that all client machines within the same domain will be synced to the same time source, greatly reducing the likelihood of time drift between machines.
 
+<br>
+
+### <mark>Step 1</mark>: Provide the Domain Controller with an external NTP source:
+
+<br>
 
 **External *NTP* server that will be used:**
-	***time.windows.com***
-		- *This is Microsoft's public **NTP** server*
+>
+> ***time.windows.com***
+>
+> - *This is Microsoft's public **NTP** server*
 
 
 **Configure the *Domain Controller* as a reliable time source:**
