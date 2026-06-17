@@ -82,7 +82,7 @@
 
 > ![](images/users-groups-permissions/admin-permission.png)
 
-### Problem:
+### 🟥 Problem:
 
 **Users where able to access shares belonging to other departments:**
 >
