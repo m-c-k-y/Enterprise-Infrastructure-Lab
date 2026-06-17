@@ -23,7 +23,7 @@
 
 **Added firewall rule to block all traffic from the Domain Controller to the internet:** 
 
-> ![](images/pfSense/block-DC-internet.png)
+> <img src="images/pfSense/block-DC-internet.png" width="600">
 > 
 > - Source: 192.168.50.10 (Domain Controller)
 > - Destination: Any
@@ -35,13 +35,13 @@
 
 **Added two rules at the top of the list to allow for *port 123 (NTP)* and *port 53 (DNS)* traffic:**
 
-> ![](images/pfSense/allow-NTP-DNS.png)
+> <img src="images/pfSense/allow-NTP-DNS.png" width="600">
 > 
 > **Note:** ***pfSense** uses **top-down rule processing**, meaning rules above take priority over rules below.*
 
 ***DNS* + *NTP* now working on the *Domain Controller*:**
 
-> ![](images/pfSense/DNS-NTP-DC-working.png)
+> <img src="images/pfSense/DNS-NTP-DC-working.png" width="600">
 ---
 <br>
 
@@ -55,11 +55,11 @@
 
 **Provided two specific DNS servers for pfSense to use:**
 
-> ![](images/pfSense/specific-DNS-servers.png)
+> <img src="images/pfSense/specific-DNS-servers.png" width="600">
 
 **Updated firewall rules to allow for pfSense DNS resolution:**
 
-> ![](images/pfSense/pfSense-DNS-rule.png)
+> <img src="images/pfSense/pfSense-DNS-rule.png" width="600">
 > 
 > - **Rule 1: *Allow DNS from DC to pfSense***
 > 
@@ -72,6 +72,6 @@
 
 **Updated *DNS* traffic flow:**
 
-![](images/pfSense/dns-traffic-flow.png)
+<img src="images/pfSense/dns-traffic-flow.png" width="200">
 
 
