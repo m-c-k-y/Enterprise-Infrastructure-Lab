@@ -102,7 +102,7 @@
 
 > ![](images/users-groups-permissions/removed-everyone-group.png)
 
-### Result:
+### 🏆 Result:
 
 ***HR* user attempting to access the *IT* share:**
 
