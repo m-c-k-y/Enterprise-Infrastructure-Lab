@@ -29,7 +29,7 @@
 **Each user would belong to a separate department:**
  - IT
  - HR
-
+---
 <br>
 
 ### <mark>Step 2</mark>: Create Groups and shares:
@@ -61,7 +61,7 @@
 **After share configuration:**
 >
 >![](images/users-groups-permissions/after-share.png)
-
+---
 <br>
 
 ### <mark>Step 3</mark>: Assign permissions for shares:
@@ -107,7 +107,7 @@
 ***HR* user attempting to access the *IT* share:**
 
 > ![](images/users-groups-permissions/hr-attempt-it.png)
-
+---
 <br>
 
 ### <mark>Step 4</mark>: Map drives for each share:
