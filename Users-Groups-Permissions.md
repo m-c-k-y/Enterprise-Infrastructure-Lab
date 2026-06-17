@@ -96,7 +96,7 @@
 
 > ![](images/users-groups-permissions/everyone-group.png)
    
-### Solution: 
+### 🟩 Solution: 
 
 **Removed the "*Everyone*" group from *Share Permissions* in both shares:**
 
