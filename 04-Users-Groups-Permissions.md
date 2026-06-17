@@ -42,7 +42,7 @@
 > 
 > Permission assignment for these groups will be structured following the "***AGDLP model***":
 >>
->> <img src="images/users-groups-permissions/agdlp-model.png" width="500">
+>> <img src="images/users-groups-permissions/agdlp-model.png" width="600">
 >> 
 >> -  **Users** are put into **global groups**. These groups represent the department.
 >> - Permissions are only assigned to the **domain local groups**, NOT **global groups** or **users** directly.
