@@ -82,7 +82,7 @@
 
 > ![](images/users-groups-permissions/admin-permission.png)
 
-### 🟥 Problem:
+#### 🟥 Problem:
 
 **Users where able to access shares belonging to other departments:**
 >
@@ -90,13 +90,13 @@
 >
 > ![](images/users-groups-permissions/hr-accessing-it.png)
 
-### 🟨 Why:
+#### 🟨 Why:
 
 **The "*Everyone*" group had read permissions in both shares:**
 
 > ![](images/users-groups-permissions/everyone-group.png)
    
-### 🟩 Solution: 
+#### 🟩 Solution: 
 
 **Removed the "*Everyone*" group from *Share Permissions* in both shares:**
 
