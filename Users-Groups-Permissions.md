@@ -1,38 +1,54 @@
 # Users, Groups, and Permissions
----
 
-## GOALS:
+
+### Goals:
    - Create two users that belong to two different groups (departments).
    - Assign unique permissions for each group.
 
 ---
 
-### ==Step 1==: Create Organizational Units and Users:
+<br>
 
+### <mark>Step 1</mark>: Create Organizational Units and Users:
 
-##### Organizational Unit:
-   - Organizational Units are containers used to organize users, computers, groups and other objects into a logical structure.
+<br>
 
+#### Organizational Unit:
+ - Organizational Units are containers used to organize users, computers, groups and other objects into a logical structure.
+
+<br>
 
 ***Organizational Units* for Computers, Groups, Servers, Service Accounts, and Users created:**
-	![](images/users-groups-permissions/OUs.png)
+>
+> ![](images/users-groups-permissions/OUs.png)
 
 **Two users created inside of the *"Users" OU*:**
-	![](images/users-groups-permissions/users-created.png)
-		**Each user would belong to a separate department:**
-			- IT
-			- HR
+>
+> ![](images/users-groups-permissions/users-created.png)
+>
+**Each user would belong to a separate department:**
+ - IT
+ - HR
 
-### ==Step 2==: Create Groups and shares:
+<br>
+
+### <mark>Step 2</mark>: Create Groups and shares:
+
+<br>
 
 **Global and Domain Local groups added to the *"Groups" OU*:**
-	![](images/users-groups-permissions/groups-created.png)
-   - Permission assignment for these groups will be structured following the "***AGDLP model***":
-     ![](images/users-groups-permissions/agdlp-model.png)
-		-  **Users** are put into **global groups**. These groups represent the department.
-		- Permissions are only assigned to the **domain local groups**, NOT **global groups** or **users** directly.
-		- A **global group** is added to a **domain local group** and only then do they inherit those permissions. This will allow for scalability as well as separation of roles from resource access.
-	- This is **Microsoft's** recommended way to assign permissions in ***Active Directory***.
+
+> ![](images/users-groups-permissions/groups-created.png)
+> 
+> Permission assignment for these groups will be structured following the "***AGDLP model***":
+>>
+>> ![](images/users-groups-permissions/agdlp-model.png)
+>> 
+>> -  **Users** are put into **global groups**. These groups represent the department.
+>> - Permissions are only assigned to the **domain local groups**, NOT **global groups** or **users** directly.
+>> - A **global group** is added to a **domain local group** and only then do they inherit those permissions. This will allow for scalability as well as separation of roles from resource access.
+>>
+>>  This is **Microsoft's** recommended way to assign permissions in ***Active Directory***.
 
 **Configured *IT* and *HR* folders as network shares:**
 **Before share configuration:**
