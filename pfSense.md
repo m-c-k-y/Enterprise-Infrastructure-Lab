@@ -14,7 +14,7 @@
 
 ##### Preface:
    - *Protection from unsolicited **INBOUND** internet traffic is provided by **pfSense's** default **NAT** and **WAN** firewall behavior. The following rules are intended only for **OUTBOUND** internet traffic.*
-
+---
 <br>
 
 ### <mark>Step 1</mark>: Prevent internet access from the Domain Controller:
@@ -42,7 +42,7 @@
 ***DNS* + *NTP* now working on the *Domain Controller*:**
 
 > ![](images/pfSense/DNS-NTP-DC-working.png)
-
+---
 <br>
 
 ### <mark>Step 2</mark>: Configure pfSense as a DNS Forwarder/Resolver:
