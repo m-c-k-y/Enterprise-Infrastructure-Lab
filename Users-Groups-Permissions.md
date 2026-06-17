@@ -69,13 +69,18 @@
 <br>
 
 **Assigned share permissions to *Domain Local* groups:**
-   ![](images/users-groups-permissions/share-permissions1.png)
-   ![](images/users-groups-permissions/add-user-permissions.png)
-   ![](images/users-groups-permissions/domain-local-permissions.png)
-	   ***Reminder:** Permissions here are ONLY assigned to Domain Local groups, NOT Global groups or users directly, as per the **AGDLP model**.*
 
-   **Administrator access was added to all shares to allow for Administrative troubleshooting:**
-   ![](images/users-groups-permissions/admin-permission.png)
+>![](images/users-groups-permissions/share-permissions1.png)
+>
+> ![](images/users-groups-permissions/add-user-permissions.png)
+>
+> ![](images/users-groups-permissions/domain-local-permissions.png)
+>
+>> ***Reminder:** Permissions here are ONLY assigned to Domain Local groups, NOT Global groups or users directly, as per the **AGDLP model**.*
+
+**Administrator access was added to all shares to allow for Administrative troubleshooting:**
+
+> ![](images/users-groups-permissions/admin-permission.png)
 
 #### Problem:
    - **Users where able to access shares belonging to other departments:**
