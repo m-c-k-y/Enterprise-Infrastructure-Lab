@@ -31,7 +31,7 @@
 #### 🟥 Problem:
    - Upon blocking all outbound internet traffic, NTP synchronization failed because the Domain Controller would no longer be able to perform DNS lookups in order to resolve the name of its external NTP source (time.windows.com).
 
-#### Solution:
+#### 🟩 Solution:
 
 **Added two rules at the top of the list to allow for *port 123 (NTP)* and *port 53 (DNS)* traffic:**
 
