@@ -28,7 +28,7 @@
 > - Source: 192.168.50.10 (Domain Controller)
 > - Destination: Any
 
-#### Problem:
+#### 🟥 Problem:
    - Upon blocking all outbound internet traffic, NTP synchronization failed because the Domain Controller would no longer be able to perform DNS lookups in order to resolve the name of its external NTP source (time.windows.com).
 
 #### Solution:
