@@ -51,13 +51,22 @@
 >>  This is **Microsoft's** recommended way to assign permissions in ***Active Directory***.
 
 **Configured *IT* and *HR* folders as network shares:**
-**Before share configuration:**
-   ![](images/users-groups-permissions/before-share.png)
-   ![](images/users-groups-permissions/share-folder.png)
-**After share configuration:**
-   ![](images/users-groups-permissions/after-share.png)
 
-### ==Step 3==: Assign permissions for shares:
+**Before share configuration:**
+>
+> ![](images/users-groups-permissions/before-share.png)
+>
+> ![](images/users-groups-permissions/share-folder.png)
+
+**After share configuration:**
+>
+>![](images/users-groups-permissions/after-share.png)
+
+<br>
+
+### <mark>Step 3</mark>: Assign permissions for shares:
+
+<br>
 
 **Assigned share permissions to *Domain Local* groups:**
    ![](images/users-groups-permissions/share-permissions1.png)
