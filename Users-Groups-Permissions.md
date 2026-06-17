@@ -83,43 +83,63 @@
 > ![](images/users-groups-permissions/admin-permission.png)
 
 #### Problem:
-   - **Users where able to access shares belonging to other departments:**
-    ***HR* user accessing the *IT* share:**
-    ![](images/users-groups-permissions/hr-accessing-it.png)
+
+**Users where able to access shares belonging to other departments:**
+>
+> ***HR* user accessing the *IT* share:**
+>
+> ![](images/users-groups-permissions/hr-accessing-it.png)
 
 #### Why:
-   - **The "*Everyone*" group had read permissions in both shares:**
-    ![](images/users-groups-permissions/everyone-group.png)
+
+**The "*Everyone*" group had read permissions in both shares:**
+
+> ![](images/users-groups-permissions/everyone-group.png)
    
 #### Solution: 
-   - **Removed the "*Everyone*" group from *Share Permissions* in both shares:**
-    ![](images/users-groups-permissions/removed-everyone-group.png)
+
+**Removed the "*Everyone*" group from *Share Permissions* in both shares:**
+
+> ![](images/users-groups-permissions/removed-everyone-group.png)
 
 #### Result:
-   - ***HR* user attempting to access the *IT* share:**
-	![](images/users-groups-permissions/hr-attempt-it.png)
 
+***HR* user attempting to access the *IT* share:**
 
-### ==Step 4==: Map drives for each share:
+> ![](images/users-groups-permissions/hr-attempt-it.png)
+
+<br>
+
+### <mark>Step 4</mark>: Map drives for each share:
+
+<br>
 
 #### Why:
    - **By mapping drives for each share, this will not only save users time but also ensure they do not mistakenly attempt to access other department's shares.**
 
 **Creating mapped drives:**
-   ![](images/users-groups-permissions/drive-mapping-policy.png)
-   ![](images/users-groups-permissions/drive-maps.png)
+
+> ![](images/users-groups-permissions/drive-mapping-policy.png)
+> 
+> ![](images/users-groups-permissions/drive-maps.png)
    
 **Assigning a unique Drive Letter for each share:**
-   ![](images/users-groups-permissions/drive-letter.png)
+
+> ![](images/users-groups-permissions/drive-letter.png)
 
 **Targeting the security group (Domain Local group) for each drive:**
-   ![](images/users-groups-permissions/item-level-targeting.png)
-   ![](images/users-groups-permissions/targeting-domain-local.png)
-		- *This ensures that only members of the corresponding **Domain Local group** would receive the mapped drives.*
+
+> ![](images/users-groups-permissions/item-level-targeting.png)
+> 
+> ![](images/users-groups-permissions/targeting-domain-local.png)
+> 
+> - *This ensures that only members of the corresponding **Domain Local group** would receive the mapped drives.*
 
 **Mapped drives created for both the *IT* and *HR* shares:**
-   ![](images/users-groups-permissions/mapped-drives-created.png)
+
+> ![](images/users-groups-permissions/mapped-drives-created.png)
 
 ***HR* user accessing the *HR* share through the mapped drive:**
-   ![](images/users-groups-permissions/mapped-drive-access.png)
+
+> ![](images/users-groups-permissions/mapped-drive-access.png)
    
