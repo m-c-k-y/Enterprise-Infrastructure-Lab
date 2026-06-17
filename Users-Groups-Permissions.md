@@ -90,7 +90,7 @@
 >
 > ![](images/users-groups-permissions/hr-accessing-it.png)
 
-### Why:
+### 🟨 Why:
 
 **The "*Everyone*" group had read permissions in both shares:**
 
