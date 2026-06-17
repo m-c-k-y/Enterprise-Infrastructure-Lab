@@ -20,11 +20,11 @@
 
 ***Organizational Units* for Computers, Groups, Servers, Service Accounts, and Users created:**
 >
-> ![](images/users-groups-permissions/OUs.png)
+> <img src="images/users-groups-permissions/OUs.png" width="600">
 
 **Two users created inside of the *"Users" OU*:**
 >
-> ![](images/users-groups-permissions/users-created.png)
+> <img src="images/users-groups-permissions/users-created.png" width="600">
 >
 **Each user would belong to a separate department:**
  - IT
@@ -38,11 +38,11 @@
 
 **Global and Domain Local groups added to the *"Groups" OU*:**
 
-> ![](images/users-groups-permissions/groups-created.png)
+> <img src="images/users-groups-permissions/groups-created.png" width="600">
 > 
 > Permission assignment for these groups will be structured following the "***AGDLP model***":
 >>
->> ![](images/users-groups-permissions/agdlp-model.png)
+>> <img src="images/users-groups-permissions/agdlp-model.png" width="600">
 >> 
 >> -  **Users** are put into **global groups**. These groups represent the department.
 >> - Permissions are only assigned to the **domain local groups**, NOT **global groups** or **users** directly.
@@ -54,13 +54,13 @@
 
 **Before share configuration:**
 >
-> ![](images/users-groups-permissions/before-share.png)
+> <img src="images/users-groups-permissions/before-share.png" width="600">
 >
-> ![](images/users-groups-permissions/share-folder.png)
+> <img src="images/users-groups-permissions/share-folder.png" width="600">
 
 **After share configuration:**
 >
->![](images/users-groups-permissions/after-share.png)
+><img src="images/users-groups-permissions/after-share.png" width="600">
 ---
 <br>
 
@@ -70,17 +70,17 @@
 
 **Assigned share permissions to *Domain Local* groups:**
 
->![](images/users-groups-permissions/share-permissions1.png)
+> <img src="images/users-groups-permissions/share-permissions1.png" width="600">
 >
-> ![](images/users-groups-permissions/add-user-permissions.png)
+> <img src="images/users-groups-permissions/add-user-permissions.png" width="600">
 >
-> ![](images/users-groups-permissions/domain-local-permissions.png)
+> <img src="images/users-groups-permissions/domain-local-permissions.png" width="600">
 >
 >> ***Reminder:** Permissions here are ONLY assigned to Domain Local groups, NOT Global groups or users directly, as per the **AGDLP model**.*
 
 **Administrator access was added to all shares to allow for Administrative troubleshooting:**
 
-> ![](images/users-groups-permissions/admin-permission.png)
+> <img src="images/users-groups-permissions/admin-permission.png" width="600">
 
 #### 🟥 Problem:
 
@@ -88,25 +88,25 @@
 >
 > ***HR* user accessing the *IT* share:**
 >
-> ![](images/users-groups-permissions/hr-accessing-it.png)
+> <img src="images/users-groups-permissions/hr-accessing-it.png" width="600">
 
 #### 🟨 Why:
 
 **The "*Everyone*" group had read permissions in both shares:**
 
-> ![](images/users-groups-permissions/everyone-group.png)
+> <img src="images/users-groups-permissions/everyone-group.png" width="600">
    
 #### 🟩 Solution: 
 
 **Removed the "*Everyone*" group from *Share Permissions* in both shares:**
 
-> ![](images/users-groups-permissions/removed-everyone-group.png)
+> <img src="images/users-groups-permissions/removed-everyone-group.png" width="600">
 
 ### 🏆 Result:
 
 ***HR* user attempting to access the *IT* share:**
 
-> ![](images/users-groups-permissions/hr-attempt-it.png)
+> <img src="images/users-groups-permissions/hr-attempt-it.png" width="600">
 ---
 <br>
 
@@ -119,25 +119,25 @@
 
 **Creating mapped drives:**
 
-> ![](images/users-groups-permissions/drive-mapping-policy.png)
+> <img src="images/users-groups-permissions/drive-mapping-policy.png" width="600">
 > 
-> ![](images/users-groups-permissions/drive-maps.png)
+> <img src="images/users-groups-permissions/drive-maps.png" width="600">
    
 **Assigning a unique Drive Letter for each share:**
 
-> ![](images/users-groups-permissions/drive-letter.png)
+> <img src="images/users-groups-permissions/drive-letter.png" width="600">
 
 **Targeting the security group (Domain Local group) for each drive:**
 
-> ![](images/users-groups-permissions/item-level-targeting.png)
+> <img src="images/users-groups-permissions/item-level-targeting.png" width="600">
 > 
-> ![](images/users-groups-permissions/targeting-domain-local.png)
+> <img src="images/users-groups-permissions/targeting-domain-local.png" width="600">
 > 
 > - *This ensures that only members of the corresponding **Domain Local group** would receive the mapped drives.*
 
 **Mapped drives created for both the *IT* and *HR* shares:**
 
-> ![](images/users-groups-permissions/mapped-drives-created.png)
+> <img src="images/users-groups-permissions/mapped-drives-created.png" width="600">
 
 ***HR* user accessing the *HR* share through the mapped drive:**
 
