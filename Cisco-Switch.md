@@ -82,7 +82,7 @@
 
 <br>
 
-### Problem:
+### 🟥 Problem:
 
 ***The Trunk only allows for VLAN10 and VLAN20 tagged traffic, while Proxmox lives on the 192.168.20.0/24 subnet. Since all traffic that isn't tagged for VLAN10 or VLAN20 gets sent to the native VLAN (VLAN1 by default), this resulted in loss of access to Proxmox's browser UI.***
 
