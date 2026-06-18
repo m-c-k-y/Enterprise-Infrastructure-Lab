@@ -25,7 +25,7 @@
 
 Migrate the ***client machine to VLAN10*** followed by the ***Domain Controller to VLAN20***.
 
-**PROBLEM:**
+🟥 **PROBLEM:**
 
 Migrating the client machine to ***VLAN10*** resulted in loss of access to the ***pfSense browser UI*** from the client's browser:
 
