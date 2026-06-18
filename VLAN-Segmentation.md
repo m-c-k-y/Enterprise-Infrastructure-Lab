@@ -1,32 +1,47 @@
 # VLAN Segmentation
----
 
-## Objective:
+### Objective:
    - Segment servers and clients into separate VLANs
 
 ---
 
+<br>
 
 **VLAN assignment:**
-	**VLAN10 (Clients) = *192.168.110.0/24***
-	**VLAN20 (Servers) = *192.168.120.0/24***
+
+ - **VLAN10 (Clients) = *192.168.110.0/24***
+ - **VLAN20 (Servers) = *192.168.120.0/24***
+
+<br>
 
 **VLANs will have a DHCP Address pool range of .100 - .199:**
-	![](images/vlan-segmentation/dhcp-range.png)
+
+> ![](images/vlan-segmentation/dhcp-range.png)
 
 
-#### ==Origianl plan==:
-   - Migrate the ***client machine to VLAN10*** followed by the ***Domain Controller to VLAN20***.
-		**PROBLEM:**
-		    - Migrating the client machine to ***VLAN10*** resulted in loss of access to the ***pfSense browser UI*** from the client's browser:
-			    ![](images/vlan-segmentation/pfsense-lost-access.png)
-		**WHY:** 
-			- The client was now in a different subnet to pfSense but no firewall rule was created to allow traffic from that subnet.
-		**SOLUTION:**
-			Added ***temporary firewall rule*** to allow all traffic from the ***VLAN10 subnet***:
-				![](images/vlan-segmentation/allow-all-vlan10.png)
+<br>
 
-#### ==Updated plan==:
+### 📝 Origianl plan:
+
+Migrate the ***client machine to VLAN10*** followed by the ***Domain Controller to VLAN20***.
+
+**PROBLEM:**
+
+Migrating the client machine to ***VLAN10*** resulted in loss of access to the ***pfSense browser UI*** from the client's browser:
+
+> ![](images/vlan-segmentation/pfsense-lost-access.png)
+>
+**WHY:**
+> 
+The client was now in a different subnet to pfSense but no firewall rule was created to allow traffic from that subnet.
+> 
+**SOLUTION:**
+
+Added ***temporary firewall rule*** to allow all traffic from the ***VLAN10 subnet***:
+
+> ![](images/vlan-segmentation/allow-all-vlan10.png)
+
+### 💡 Updated plan:
    - Migrate the ***Domain Controller to VLAN20*** followed by the ***client machine to VLAN10***.
 		**WHY:** Migrating the ***Domain Controller*** first will result in easier management of potential ***DNS/NTP*** issues between the ***client*** and ***DC***.
 
