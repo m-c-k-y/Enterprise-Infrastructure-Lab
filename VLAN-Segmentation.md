@@ -35,7 +35,7 @@ Migrating the client machine to ***VLAN10*** resulted in loss of access to the *
 > 
 The client was now in a different subnet to pfSense but no firewall rule was created to allow traffic from that subnet.
 > 
-#### SOLUTION:
+#### 🟩 SOLUTION:
 
 Added ***temporary firewall rule*** to allow all traffic from the ***VLAN10 subnet***:
 
