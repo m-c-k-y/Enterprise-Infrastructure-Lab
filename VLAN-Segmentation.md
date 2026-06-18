@@ -16,7 +16,7 @@
 
 **VLANs will have a DHCP Address pool range of .100 - .199:**
 
-> ![](images/vlan-segmentation/dhcp-range.png)
+> <img src="images/vlan-segmentation/dhcp-range.png" width="600">
 
 
 <br>
@@ -29,7 +29,7 @@ Migrate the ***client machine to VLAN10*** followed by the ***Domain Controller 
 
 Migrating the client machine to ***VLAN10*** resulted in loss of access to the ***pfSense browser UI*** from the client's browser:
 
-> ![](images/vlan-segmentation/pfsense-lost-access.png)
+> <img src="images/vlan-segmentation/pfsense-lost-access.png" width="600">
 >
 #### 🟨 WHY:
 > 
@@ -39,7 +39,7 @@ The client was now in a different subnet to pfSense but no firewall rule was cre
 
 Added ***temporary firewall rule*** to allow all traffic from the ***VLAN10 subnet***:
 
-> ![](images/vlan-segmentation/allow-all-vlan10.png)
+> <img src="images/vlan-segmentation/allow-all-vlan10.png" width="600">
 
 ### 💡 Updated plan:
 
@@ -56,26 +56,26 @@ Migrate the ***Domain Controller to VLAN20*** followed by the ***client machine 
 
 **Firewall rules for VLAN20 to allow for DNS and NTP:**
 
-> ![](images/vlan-segmentation/allow-dns-ntp-vlan20.png)
+> <img src="images/vlan-segmentation/allow-dns-ntp-vlan20.png" width="600">
 
 **Windows VLAN tag:**
 
-> ![](images/vlan-segmentation/windows-vlan-tag.png)
+> <img src="images/vlan-segmentation/windows-vlan-tag.png" width="600">
 
 **Request to obtain an IP address automatically from the DHCP server:**
 
-> ![](images/vlan-segmentation/request-dhcp.png)
+> <img src="images/vlan-segmentation/request-dhcp.png" width="600">
 > 
 > Why?:
 > - *Introducing automation here will reduce the risk of user misinput that can happen when manually configuring IP addresses.*
 > 
 > **The Domain Controller obtained an IP address of 192.168.120.100:**
 >> 
->> ![](images/vlan-segmentation/dc-obtained-dhcp.png)
+>> <img src="images/vlan-segmentation/dc-obtained-dhcp.png" width="600">
 
 **Set a static DHCP reservation for the Domain Controller using its MAC address:**
 
-> ![](images/vlan-segmentation/static-dhcp-dc.png)
+> <img src="images/vlan-segmentation/static-dhcp-dc.png" width="600">
 > 
 > - **IP reserved for the Domain Controller:** *192.168.120.10*
 > 
@@ -85,7 +85,7 @@ Migrate the ***Domain Controller to VLAN20*** followed by the ***client machine 
 
 **Domain Controller's ipconfig:**
 
-> ![](images/vlan-segmentation/dc-ipconfig.png)
+> <img src="images/vlan-segmentation/dc-ipconfig.png" width="600">
 ---
 <br>
 
@@ -99,7 +99,7 @@ Migrate the ***Domain Controller to VLAN20*** followed by the ***client machine 
 
 **Firewall rules for VLAN10:**
 
-> ![](images/vlan-segmentation/firewall-rules-vlan10.png)
+> <img src="images/vlan-segmentation/firewall-rules-vlan10.png" width="600">
 > - **Rule 1: *Allow required AD services from VLAN10 to the Domain Controller***
 > - **Rule 2: *Allow pfSense browser UI access from VLAN10***
 > - **Rule 3: *Block traffic to all other VLAN20 addresses***
@@ -107,10 +107,10 @@ Migrate the ***Domain Controller to VLAN20*** followed by the ***client machine 
 
 **The Domain Controller's address was specified as the DNS server in the DHCP config, in order to automate DNS server assignment for clients:**
 
-> ![](images/vlan-segmentation/dhcp-dns.png)
+> <img src="images/vlan-segmentation/dhcp-dns.png" width="600">
 
 **Client's ipconfig:**
 
-> ![](images/vlan-segmentation/client-ipconfig.png)
+> <img src="images/vlan-segmentation/client-ipconfig.png" width="600">
 
 
