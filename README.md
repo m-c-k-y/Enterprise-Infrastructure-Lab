@@ -3,7 +3,7 @@
 #### Project status:
 
 	🟢 Active Development
-
+---
 ### PROJECT OVERVIEW
 
 This project is designed to simulate a real enterprise network environment with a goal of teaching core networking, system administration and troubleshooting skills. Rather than focus on individual technologies in isolation, I wanted to build an environment where multiple systems depended on one another, creating opportunities to troubleshoot real-world issues.
@@ -26,12 +26,15 @@ This project is designed to simulate a real enterprise network environment with 
 - Cisco Catalyst 3560-X
 - VLANs / Inter-VLAN Routing
 - DNS / DHCP / NTP
-
+---
+<br>
 
 ## CURRENT LAB DIAGRAM
 
 ![](images/current-lab-diagram.png)
 
+---
+<br>
 
 #### Note:
-	This diagram will be updated as the project evolves.
+- This diagram will be updated as the project evolves.
