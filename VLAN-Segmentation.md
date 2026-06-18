@@ -31,7 +31,7 @@ Migrating the client machine to ***VLAN10*** resulted in loss of access to the *
 
 > ![](images/vlan-segmentation/pfsense-lost-access.png)
 >
-#### WHY:
+#### 🟨 WHY:
 > 
 The client was now in a different subnet to pfSense but no firewall rule was created to allow traffic from that subnet.
 > 
