@@ -30,7 +30,7 @@ This project is designed to simulate a real enterprise network environment with 
 
 ## CURRENT LAB DIAGRAM
 
-![[current-lab-diagram.png.png]]
+![](images/current-lab-diagram.png.png)
 
 
 #### Note:
