@@ -47,49 +47,70 @@ Migrate the ***Domain Controller to VLAN20*** followed by the ***client machine 
 
 > **WHY:**
 > - Migrating the ***Domain Controller*** first will result in easier management of potential ***DNS/NTP*** issues between the ***client*** and ***DC***.
+---
+<br>
 
+### <mark>Step 1</mark>: Move the Domain Controller to VLAN20:
 
-### ==Step 1==: Move the Domain Controller to VLAN20:
-
+<br>
 
 **Firewall rules for VLAN20 to allow for DNS and NTP:**
-	![](images/vlan-segmentation/allow-dns-ntp-vlan20.png)
+
+> ![](images/vlan-segmentation/allow-dns-ntp-vlan20.png)
 
 **Windows VLAN tag:**
-	![](images/vlan-segmentation/windows-vlan-tag.png)
+
+> ![](images/vlan-segmentation/windows-vlan-tag.png)
 
 **Request to obtain an IP address automatically from the DHCP server:**
-	![](images/vlan-segmentation/request-dhcp.png)
-	Why?:
-		- *Introducing automation here will reduce the risk of user misinput that can happen when manually configuring IP addresses.*
-	**The Domain Controller obtained an IP address of 192.168.120.100:**
-		![](images/vlan-segmentation/dc-obtained-dhcp.png)
+
+> ![](images/vlan-segmentation/request-dhcp.png)
+> 
+> Why?:
+> - *Introducing automation here will reduce the risk of user misinput that can happen when manually configuring IP addresses.*
+> 
+> **The Domain Controller obtained an IP address of 192.168.120.100:**
+>> 
+>> ![](images/vlan-segmentation/dc-obtained-dhcp.png)
 
 **Set a static DHCP reservation for the Domain Controller using its MAC address:**
-	![](images/vlan-segmentation/static-dhcp-dc.png)
-		**IP reserved for the Domain Controller:** *192.168.120.10*
-		**Why?:**
-			**-** *DHCP reservation was used to ensure the Domain Controller always receives the same IP address while still benefiting from centralized IP management.*
+
+> ![](images/vlan-segmentation/static-dhcp-dc.png)
+> 
+> - **IP reserved for the Domain Controller:** *192.168.120.10*
+> 
+> **Why?:**
+> 
+> - *DHCP reservation was used to ensure the Domain Controller always receives the same IP address while still benefiting from centralized IP management.*
 
 **Domain Controller's ipconfig:**
-	![](images/vlan-segmentation/dc-ipconfig.png)
 
+> ![](images/vlan-segmentation/dc-ipconfig.png)
+---
+<br>
 
-### ==Step 2==: Move clients to VLAN10:
+### <mark>Step 2</mark>: Move clients to VLAN10:
+
+<br>
 
 **Note:** *Most of the migration process for VLAN10 followed the same procedure as VLAN20. Rehashed steps will not be shown.
 
+<br>
+
 **Firewall rules for VLAN10:**
-	![](images/vlan-segmentation/firewall-rules-vlan10.png)
-		**Rule 1: *Allow required AD services from VLAN10 to the Domain Controller***
-		**Rule 2: *Allow pfSense browser UI access from VLAN10***
-		**Rule 3: *Block traffic to all other VLAN20 addresses***
-		**Rule 4: *Block all other traffic from VLAN10***
+
+> ![](images/vlan-segmentation/firewall-rules-vlan10.png)
+> - **Rule 1: *Allow required AD services from VLAN10 to the Domain Controller***
+> - **Rule 2: *Allow pfSense browser UI access from VLAN10***
+> - **Rule 3: *Block traffic to all other VLAN20 addresses***
+> - **Rule 4: *Block all other traffic from VLAN10***
 
 **The Domain Controller's address was specified as the DNS server in the DHCP config, in order to automate DNS server assignment for clients:**
-	![](images/vlan-segmentation/dhcp-dns.png)
+
+> ![](images/vlan-segmentation/dhcp-dns.png)
 
 **Client's ipconfig:**
-	![](images/vlan-segmentation/client-ipconfig.png)
+
+> ![](images/vlan-segmentation/client-ipconfig.png)
 
 
