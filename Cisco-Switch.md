@@ -11,7 +11,7 @@
 
 **Cisco Catalyst 3560-X**
 
-> ![](images/cisco-switch/cisco-switch.png)
+> <img src="images/cisco-switch/cisco-switch.png" width="500">
 > 
 > **Price: *$90 AUD***
 > 
@@ -31,7 +31,7 @@
 
 **Topology goal at this stage:**
 
-> ![](images/cisco-switch/topology-goal.png)
+> <img src="images/cisco-switch/topology-goal.png" width="125">
 	
 <br>
 
@@ -41,15 +41,15 @@
 
 **Assigned the switch a hostname of "CORE-SW1":**
 
-> ![](images/cisco-switch/switch-name.png)
+> <img src="images/cisco-switch/switch-name.png" width="500">
 	
 **Set privileged EXEC mode password:**
 
-> ![](images/cisco-switch/switch-password.png)
+> <img src="images/cisco-switch/switch-password.png" width="500">
 
 **Configure the default gateway:**
 
-> ![](images/cisco-switch/switch-default-gateway.png)
+> <img src="images/cisco-switch/switch-default-gateway.png" width="500">
 ---
 <br>
 
@@ -64,21 +64,21 @@
 
 **Assigned VLAN names:**
 
-> ![](images/cisco-switch/vlan-names.png)
+> <img src="images/cisco-switch/vlan-names.png" width="500">
 
 **VLAN SVIs created:**
 
-> ![](images/cisco-switch/vlan-svis.png)
+> <img src="images/cisco-switch/vlan-svis.png" width="500">
 > 
 > - *These are the default gateways for the VLANs*
 		
 **VLAN status:**
 
-> ![](images/cisco-switch/vlan-status.png)
+> <img src="images/cisco-switch/vlan-status.png" width="500">
 
 **Trunking configured on Gi0/2 (Port 2):**
 
-> ![](images/cisco-switch/trunking-port2.png)
+> <img src="images/cisco-switch/trunking-port2.png" width="500">
 
 <br>
 
@@ -90,18 +90,18 @@
 
 **VLAN99 was created, and an SVI was configured with an address of 192.168.20.100 to provide management access to the switch. VLAN99 would also act as the native VLAN:**
 
-> ![](images/cisco-switch/vlan99-svi.png)
+> <img src="images/cisco-switch/vlan99-svi.png" width="500">
 
 <br>
 
 **VLAN99 assigned to Gi0/1 (Port 1):**
 
-> ![](images/cisco-switch/vlan99-port1.png)
+> <img src="images/cisco-switch/vlan99-port1.png" width="500">
 
 
 **Updated trunking setup:**
 
-> ![](images/cisco-switch/updated-trunking-setup.png)
+> <img src="images/cisco-switch/updated-trunking-setup.png" width="500">
 
 #### Why VLAN99 instead of VLAN1:
 
