@@ -82,24 +82,32 @@
 
 <br>
 
-#### Problem:
-   - ***The Trunk only allows for VLAN10 and VLAN20 tagged traffic, while Proxmox lives on the 192.168.20.0/24 subnet. Since all traffic that isn't tagged for VLAN10 or VLAN20 gets sent to the native VLAN (VLAN1 by default), this resulted in loss of access to Proxmox's browser UI.***
+### Problem:
 
-#### Solution:
-   - **VLAN99 was created, and an SVI was configured with an address of 192.168.20.100 to provide management access to the switch. VLAN99 would also act as the native VLAN:**
-		![](images/cisco-switch/vlan99-svi.png)
+***The Trunk only allows for VLAN10 and VLAN20 tagged traffic, while Proxmox lives on the 192.168.20.0/24 subnet. Since all traffic that isn't tagged for VLAN10 or VLAN20 gets sent to the native VLAN (VLAN1 by default), this resulted in loss of access to Proxmox's browser UI.***
+
+### Solution:
+
+**VLAN99 was created, and an SVI was configured with an address of 192.168.20.100 to provide management access to the switch. VLAN99 would also act as the native VLAN:**
+
+> ![](images/cisco-switch/vlan99-svi.png)
+
+<br>
 
 **VLAN99 assigned to Gi0/1 (Port 1):**
-	![](images/cisco-switch/vlan99-port1.png)
+
+> ![](images/cisco-switch/vlan99-port1.png)
 
 
 **Updated trunking setup:**
-	![](images/cisco-switch/updated-trunking-setup.png)
+
+> ![](images/cisco-switch/updated-trunking-setup.png)
 
 #### Why VLAN99 instead of VLAN1:
-   - **Cisco uses VLAN1 by default for:**
-	- **Control Traffic**
-	- **Switch Port Assignment**
-   - **Having a dedicated Management/Native VLAN is much cleaner.**
+
+ - **Cisco uses VLAN1 by default for:**
+ - **Control Traffic**
+ - **Switch Port Assignment**
+ - **Having a dedicated Management/Native VLAN is much cleaner.**
 
 
