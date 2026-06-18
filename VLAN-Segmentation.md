@@ -42,8 +42,11 @@ Added ***temporary firewall rule*** to allow all traffic from the ***VLAN10 subn
 > ![](images/vlan-segmentation/allow-all-vlan10.png)
 
 ### 💡 Updated plan:
-   - Migrate the ***Domain Controller to VLAN20*** followed by the ***client machine to VLAN10***.
-		**WHY:** Migrating the ***Domain Controller*** first will result in easier management of potential ***DNS/NTP*** issues between the ***client*** and ***DC***.
+
+Migrate the ***Domain Controller to VLAN20*** followed by the ***client machine to VLAN10***.
+
+> **WHY:**
+> - Migrating the ***Domain Controller*** first will result in easier management of potential ***DNS/NTP*** issues between the ***client*** and ***DC***.
 
 
 ### ==Step 1==: Move the Domain Controller to VLAN20:
