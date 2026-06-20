@@ -1,6 +1,6 @@
 # pfSense
 
-### 🎯 Goal:
+### 🎯 Objective:
    - Minimize security risk by reducing unnecessary internet access from the Domain Controller while relying on pfSense's default firewall behavior to protect clients from unsolicited inbound internet traffic.
 
 ---
