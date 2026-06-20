@@ -52,7 +52,7 @@
 <br>
 
 #### VirtIO:
-   - **VirtIO** is a set of drivers designed for virtual machines. It allows the VM to communicate more efficiently with Proxmox than traditional emulated hardware, resulting in better performance. The downside is that **Windows Server does not recognize it out of the box**, so the **VirtIO driver ISO** will have to be attached during installation.
+   - **VirtIO** is a set of drivers designed for virtual machines. It allows the VM to communicate more efficiently with Proxmox than traditional emulated hardware, resulting in better performance. The downside is that Windows Server does not recognize it out of the box, so the **VirtIO driver ISO** will have to be attached during installation.
 
 <br>
 
