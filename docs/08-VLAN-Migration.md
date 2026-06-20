@@ -37,7 +37,7 @@
 
 
 #### 🟥 Problem #1:
-Upon moving the **Domain Controller to VLAN10**, all reachibility to addresses outside of **VLAN10** was lost.
+Upon moving the **Domain Controller to VLAN10**, all reachability to addresses outside of **VLAN10** was lost.
 
 **Ping test from Domain Controller:**
 >  
