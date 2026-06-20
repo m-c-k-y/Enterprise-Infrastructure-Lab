@@ -97,12 +97,12 @@
 
 <br>
 
-**Domain Controller static IP: *192.168.50.10***
+**Domain Controller static IP:** 192.168.50.10
 
-**Subnet: *192.168.50.0/24***
+**Subnet:** 192.168.50.0/24
 > <img src="../images/windows-server-setup/staticIP1.png" width="600">
 
-**DNS server: *192.168.50.10 (Domain Controller itself)***
+**DNS server:** 192.168.50.10 (The Domain Controller itself)
 > <img src="../images/windows-server-setup/dnsserverDC.png" width="600">
 > 
 > - **The Domain Controller was configured to use itself as its DNS server, as Active Directory relies on DNS for service discovery and authentication. External DNS requests would later be forwarded upstream as required.**
