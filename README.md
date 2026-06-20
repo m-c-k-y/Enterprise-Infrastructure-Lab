@@ -56,3 +56,43 @@ This project is designed to simulate a real enterprise network environment with 
 - [Cisco Switch](docs/07-Cisco-Switch.md)
 - [VLAN Migration](docs/08-VLAN-Migration.md)
 
+<br>
+
+<details>
+<summary>Future Plans</summary>
+
+<br>
+
+Planned additions:
+
+	 Internal AI Assistant:
+		Example:
+			User: What is the gateway for VLAN20?
+			AI: 192.168.120.1
+			User: What firewall rule allows clients to reach the DC?
+			AI: Rule 123
+			
+	 Department Segmentation:
+		- IT VLAN
+		- HR VLAN
+		- Management VLAN
+		- Server VLAN
+		
+	 Group Policy:
+		- Password policy
+		- Desktop wallpaper deployment
+		- Software deployment
+		- Browser homepage configuration
+		
+	 SIEM:
+		- Windows logs
+		- Domain Controller logs
+		- pfSense logs
+		- Switch syslog
+
+
+	Future additions will continue to be documented as the project evolves.
+	
+</details>
+
+
