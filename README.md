@@ -45,7 +45,14 @@ This project is designed to simulate a real enterprise network environment with 
 - VLANs / Inter-VLAN Routing
 - DNS / DHCP / NTP
 
-###Documentation
+### Documentation
 
-- 
+- [Windows Server Installation](docs/01-Windows-Server-install.md)
+- [AD DS Installation](docs/02-AD-DS-Installation.md)
+- [NTP](docs/03-DC-Client-NTP.md)
+- [Users, Groups, and Permissions](docs/04-Users-Groups-Permissions.md)
+- [pfSense](docs/05-pfSense.md)
+- [VLAN Segmentation](docs/06-VLAN-Segmentation.md)
+- [Cisco Switch](docs/07-Cisco-Switch.md)
+- [VLAN Migration](docs/08-VLAN-Migration.md)
 
