@@ -37,21 +37,21 @@
 
 
 #### 🟥 Problem #1:
-Upon moving **the Domain Controller** to **VLAN10**, all reachibility to addresses outside of VLAN10 was lost.
+Upon moving the **Domain Controller to VLAN10**, all reachibility to addresses outside of **VLAN10** was lost.
 
 **Ping test from Domain Controller:**
 >  
 > <img src="../images/vlan-migration/failed-ping-from-vlan10.png" width="600">
 
 #### 🟨 Theory:
-Incoming traffic back to **VLAN10** was getting dropped by the **ISP router** because it didn't know where **192.168.110.10 (Domain Controller's address)** was.
+Incoming traffic back to VLAN10 was getting dropped by the **ISP router** because it didn't know where **192.168.110.10 (Domain Controller's address)** was.
 
 #### 🟩 Solution:
 **Added static routes to the ISP router config:** 
 >
 > <img src="../images/vlan-migration/ISP-router-static-IP.png" width="600">
 >
-> - 192.168.20.100 = VLAN99 SVI
+> - **192.168.20.100 =** VLAN99 SVI
 
 <br>
 
@@ -61,11 +61,11 @@ Incoming traffic back to **VLAN10** was getting dropped by the **ISP router** be
 > <img src="../images/vlan-migration/tracert-fail.png" width="600">
 
 #### 🟨 Updated theory:
-Since setting static routes for **VLAN10 and VLAN20** did NOT resolve the problem, the issue is likely occurring **beyond the router**. This may suggest that the **ISP router is unable or unwilling to NAT traffic** from VLAN10, preventing traffic from finding its way back to **the Domain Controller**.
+Since setting static routes for **VLAN10 and VLAN20** did NOT resolve the problem, the issue is likely occurring beyond the router. This may suggest that the ISP router is unable or unwilling to NAT traffic from VLAN10, preventing traffic from finding its way back to the Domain Controller.
 
 
 ### 🟩 Solution/Change of plan:
-Unfortunately, this **ISP router does NOT provide NAT setting** that can be changed in order to resolve this issue. Because of this, **pfSense will be reintroduced as an edge router** while still having the switch handle all inter-VLAN routing.
+Unfortunately, this ISP router does **NOT** provide NAT setting that can be changed in order to resolve this issue. Because of this, **pfSense** will be reintroduced as an edge router while still having the switch handle all inter-VLAN routing.
 
 ---
 <br>
@@ -75,13 +75,13 @@ Unfortunately, this **ISP router does NOT provide NAT setting** that can be chan
 <br>
 
 #### Why a transit VLAN?:
-> The **switch and pfSense will now both be routing to eachother**, but both live in different subnets. **VLAN50 (Transit VLAN)** was created as a direct link for both routing devices to communicate.
+> The switch and pfSense will now both be routing to each other, but both live in different subnets. **VLAN50 (Transit VLAN)** was created as a direct link for both routing devices to communicate.
 
 <br>
 
 ### VLAN50 = 192.168.150.0/30
 **Why /30?:**
-> Only the **pfSense gateway (192.168.150.1)** and the **switch's VLAN50 SVI (192.168.150.2)** will be on this VLAN, meaning **only 2 host addresses are needed**.
+> Only the **pfSense gateway (192.168.150.1)** and the **switch's VLAN50 SVI (192.168.150.2)** will be on this VLAN, meaning only 2 host addresses are needed.
 
 <br>
 
@@ -105,7 +105,7 @@ Unfortunately, this **ISP router does NOT provide NAT setting** that can be chan
 > - **net0** = WAN
 > - **net1** = LAN (VLAN traffic)
 > 
-> **net0 was left without a VLAN tag** since all **untagged WAN traffic** will be going through the **native VLAN (VLAN99)**.
+> **net0** was left without a VLAN tag since all untagged WAN traffic will be going through the **native VLAN (VLAN99)**.
 > 
 **pfSense WAN and LAN assignment:**
 
@@ -133,13 +133,13 @@ Unfortunately, this **ISP router does NOT provide NAT setting** that can be chan
 
 > <img src="../images/vlan-migration/static-routes-vlan10-vlan20.png" width="600">
 >
-> - Without these, **pfSense** wouldn't know where to send traffic to for either subnet.
+> - Without these, pfSense wouldn't know where to send traffic to for either subnet.
 	
 **Outbound NAT rules created for both VLANs:**
 
 > <img src="../images/vlan-migration/nat-rules-vlans.png" width="600">
 >
-> - This resolves the original issue by allowing **pfSense to perform outbound NAT** for the **VLAN networks** before forwarding traffic to the **ISP router**.
+> - This resolves the original issue by allowing pfSense to perform outbound NAT for the VLAN networks before forwarding traffic to the ISP router.
 
 <br>
 
