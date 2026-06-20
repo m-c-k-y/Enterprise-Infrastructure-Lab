@@ -28,14 +28,14 @@
 
 <br>
 
-**External *NTP* server that will be used:**
+**External NTP server that will be used:**
 >
 > **time.windows.com**
 >
 > - This is Microsoft's public **NTP** server
 
 
-**Configure the *Domain Controller* as a reliable time source:**
+**Configure the Domain Controller as a reliable time source:**
 >
 > <img src="../images/NTP/reliable-time-source.png" width="600">
 >
@@ -66,7 +66,7 @@
 
 #### 🟥 Problem:
 
-**The client was unable to synchronize to the *Domain Controller* because difference in time exceeded the *Windows Time Service* synchronization threshold:**
+**The client was unable to synchronize to the Domain Controller because difference in time exceeded the Windows Time Service synchronization threshold:**
 >
 > <img src="../images/NTP/failed-sync.png" width="600">
 
