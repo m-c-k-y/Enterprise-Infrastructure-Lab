@@ -33,7 +33,7 @@ This project is designed to simulate a real enterprise network environment with 
 - Separate users into different groups/departments
 - Add VLAN segmentation for servers and client machines
 - Implement and manage firewall rules
-- Add a managed a layer 3 switch to handle inter-VLAN routing
+- Add a managed layer 3 switch to handle inter-VLAN routing
 
 ### Technologies Used
 
