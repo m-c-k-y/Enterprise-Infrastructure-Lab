@@ -81,7 +81,7 @@
 
 #### 🟥 Problem:
 
-**Users where able to access shares belonging to other departments:**
+**Users were able to access shares belonging to other departments:**
 >
 > ***HR* user accessing the *IT* share:**
 >
