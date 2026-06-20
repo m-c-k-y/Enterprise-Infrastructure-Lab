@@ -1,6 +1,6 @@
 # Cisco Catalyst Switch
 
-### Objective:
+### 🎯 Objective:
    - Implement a layer 3 switch to handle inter-VLAN routing.
 
 ---
