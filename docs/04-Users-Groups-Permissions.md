@@ -19,7 +19,7 @@
 >
 > - **Organizational Units** are containers used to organize users, computers, groups and other objects into a logical structure.
 
-**Two users created inside of the *"Users" OU*:**
+**Two users created inside of the "Users" OU:**
 >
 > <img src="../images/users-groups-permissions/users-created.png" width="500">
 >
@@ -33,11 +33,11 @@
 
 <br>
 
-**Global and Domain Local groups added to the *"Groups" OU*:**
+**Global and Domain Local groups added to the "Groups" OU:**
 
 > <img src="../images/users-groups-permissions/groups-created.png" width="500">
 > 
-> Permission assignment for these groups will be structured following the "***AGDLP model***":
+> Permission assignment for these groups will be structured following the **AGDLP model**:
 >>
 >> <img src="../images/users-groups-permissions/agdlp-model.png" width="600">
 >> 
@@ -45,7 +45,7 @@
 >> - Permissions are only assigned to the **domain local groups**, NOT **global groups** or **users** directly.
 >> - A **global group** is added to a **domain local group** and only then do they inherit those permissions. This will allow for scalability as well as separation of roles from resource access.
 >>
->>  This is **Microsoft's** recommended way to assign permissions in ***Active Directory***.
+>>  This is **Microsoft's** recommended way to assign permissions in Active Directory.
 
 **Configured *IT* and *HR* folders as network shares:**
 
@@ -89,13 +89,13 @@
 
 #### 🟨 Why:
 
-**The "*Everyone*" group had read permissions in both shares:**
+**The "Everyone" group had read permissions in both shares:**
 
 > <img src="../images/users-groups-permissions/everyone-group.png" width="500">
    
 #### 🟩 Solution: 
 
-**Removed the "*Everyone*" group from *Share Permissions* in both shares:**
+**Removed the "Everyone" group from *Share Permissions* in both shares:**
 
 > <img src="../images/users-groups-permissions/removed-everyone-group.png" width="500">
 
