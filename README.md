@@ -7,7 +7,7 @@
 
 <br>
 
-### CURRENT LAB DIAGRAM:
+## CURRENT LAB DIAGRAM:
 
 <br>
 
