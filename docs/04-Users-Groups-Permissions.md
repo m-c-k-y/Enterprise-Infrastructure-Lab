@@ -13,14 +13,10 @@
 
 <br>
 
-#### Organizational Unit:
- - Organizational Units are containers used to organize users, computers, groups and other objects into a logical structure.
-
-<br>
-
-***Organizational Units* for Computers, Groups, Servers, Service Accounts, and Users created:**
+**Organizational Units for Computers, Groups, Servers, Service Accounts, and Users created:**
 >
 > <img src="../images/users-groups-permissions/OUs.png" width="500">
+> - Organizational Units are containers used to organize users, computers, groups and other objects into a logical structure.
 
 **Two users created inside of the *"Users" OU*:**
 >
