@@ -5,7 +5,7 @@
 
 ---
 
-**Purpose of time synchronization in a *Active Directory* environment:**
+**Purpose of time synchronization in an *Active Directory* environment:**
 
 > Excessive time drift between a Domain Controller and client machine can cause:
 >> - Kerberos failures
@@ -74,7 +74,7 @@
 
 **1. Manually set the client's clock "close enough" to the Domain Controller's time so that it falls within the synchronization threshold.**
       
-**2. Configured the client to use the Active Directory domain hierachy:**
+**2. Configured the client to use the Active Directory domain hierarchy:**
 >      
 > <img src="../images/NTP/client-domain-hierachy.png" width="600">
 >
@@ -82,7 +82,7 @@
 > 
 > <img src="../images/NTP/client-non-reliable.png" width="600">
 >
-> - **Only the Domain Controller should be configured as reliable time source.**
+> - **Only the Domain Controller should be configured as a reliable time source.**
 >
 **4. Restarted the Windows Time service:**
 >
