@@ -84,7 +84,7 @@
 **Install VirtIO network driver:**
 > <img src="../images/windows-server-setup/updatenetworkdriver.png" width="600">
 > 
-> <img src="../images/windows-server-setup/networkdriver1.png" width="200"><img src="images/windows-server-setup/networkdriver2.png" width="200"><img src="images/windows-server-setup/networkdriver3.png" width="200">
+> <img src="../images/windows-server-setup/networkdriver1.png" width="200"><img src="../images/windows-server-setup/networkdriver2.png" width="200"><img src="../images/windows-server-setup/networkdriver3.png" width="200">
 > 
 
 	   
