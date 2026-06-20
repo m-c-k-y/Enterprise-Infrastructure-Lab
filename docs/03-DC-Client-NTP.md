@@ -32,7 +32,7 @@
 >
 > ***time.windows.com***
 >
-> - *This is Microsoft's public **NTP** server*
+> - This is Microsoft's public **NTP** server
 
 
 **Configure the *Domain Controller* as a reliable time source:**
