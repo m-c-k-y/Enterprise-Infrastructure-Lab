@@ -71,7 +71,7 @@
 > <img src="../images/windows-server-setup/unallocated-space.png" width="600">
 > 
 > - **After loading the VirtIO storage driver from the attached VirtIO ISO, Windows Server was able to detect the virtual disk and installation could proceed as normal.**
-
+---
 <br>
 
 ### <mark>Step 3</mark>: Initial Windows Server configuration:
@@ -90,7 +90,7 @@
 	   
 **VirtIO network driver successfully installed:**
 > <img src="../images/windows-server-setup/networkdriversuccess.png" width="600">
-
+---
 <br>
 
 ### <mark>Step 4</mark>: Configure Static IP:
