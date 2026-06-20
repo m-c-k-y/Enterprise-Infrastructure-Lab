@@ -1,7 +1,7 @@
 # Users, Groups, and Permissions
 
 
-### Goals:
+### 🎯 Goals:
    - Create two users that belong to two different groups (departments).
    - Assign unique permissions for each group.
 
