@@ -7,16 +7,16 @@
 
 **Purpose of time synchronization in a *Active Directory* environment:**
 
-> Excessive time drift between a ***Domain Controller*** and client machine can cause:
->> - ***Kerberos*** failures
+> Excessive time drift between a Domain Controller and client machine can cause:
+>> - Kerberos failures
 >> - External service failures
 >> - Log timestamp inaccuracy
 >
 > The implementation of ***NTP*** is necessary for providing secure identity verification through ***Kerberos*** tickets as well as ensuring reliability of log data.
 > 
-> - ***Kerberos** tickets are time-limited, meaning if there is a mismatch in time between a **Domain Controller** and client, the ticket may no longer be usable even if it should be.*
+> - **Kerberos** tickets are time-limited, meaning if there is a mismatch in time between a Domain Controller and client, the ticket may no longer be usable even if it should be.
 
-***NTP* flow plan:**
+**NTP flow plan:**
 
 > <img src="../images/NTP/ntp-flow-plan.png" width="500">
 > 
