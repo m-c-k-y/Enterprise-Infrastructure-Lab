@@ -66,7 +66,7 @@
 
 > <img src="../images/windows-server-setup/virtiodrive.png" width="600">
 >
-> <img src="../images/windows-server-setup/vioscsi1.png" width="200"><img src="images/windows-server-setup/2k22.png" width="200"><img src="images/windows-server-setup/amd64.png" width="200">
+> <img src="../images/windows-server-setup/vioscsi1.png" width="200"><img src="../images/windows-server-setup/2k22.png" width="200"><img src="../images/windows-server-setup/amd64.png" width="200">
 > 
 > <img src="../images/windows-server-setup/unallocated-space.png" width="600">
 > 
