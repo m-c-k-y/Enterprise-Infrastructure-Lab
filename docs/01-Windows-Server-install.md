@@ -1,8 +1,8 @@
-# Windows Server Install + Set Up
+# 🖥 Windows Server Install + Set Up
 
 
 ### Goal:
-   - **Create and configure a Windows Server** virtual machine that will take the role of the **Domain Controller** in the **Active Directory environment**.
+   - Create and configure a **Windows Server virtual machine** that will take the role of the **Domain Controller** in the Active Directory environment.
 
 ---
 
@@ -70,7 +70,7 @@
 > 
 > <img src="../images/windows-server-setup/unallocated-space.png" width="600">
 > 
-> - **After loading the VirtIO storage driver from the attached VirtIO ISO, Windows Server was able to detect the virtual disk and installation could proceed as normal.**
+> - After loading the VirtIO storage driver from the attached VirtIO ISO, Windows Server was able to detect the virtual disk and installation could proceed as normal.
 ---
 <br>
 
@@ -105,10 +105,10 @@
 **DNS server:** 192.168.50.10 (The Domain Controller itself)
 > <img src="../images/windows-server-setup/dnsserverDC.png" width="600">
 > 
-> - **The Domain Controller was configured to use itself as its DNS server, as Active Directory relies on DNS for service discovery and authentication. External DNS requests would later be forwarded upstream as required.**
+> - **The Domain Controller was configured to use itself as its DNS server**, as Active Directory relies on DNS for service discovery and authentication. External DNS requests would later be forwarded upstream as required.
 
 **Verification:**
 > <img src="../images/windows-server-setup/DC-Verification.png" width="600">
 > 
-> - **The network configuration was verified using *ipconfig /all.***
+> - The network configuration was verified using **ipconfig /all**.
 	   
