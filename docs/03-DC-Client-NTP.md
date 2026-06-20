@@ -1,6 +1,6 @@
 # Domain Controller + Windows Client time sync 
 
-### 🎯 Goal:
+### 🎯 Objective:
    - Establish synchronization of time between the Domain Controller and client machine.
 
 ---
