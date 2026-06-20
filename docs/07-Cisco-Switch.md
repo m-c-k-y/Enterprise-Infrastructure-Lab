@@ -1,7 +1,7 @@
 # Cisco Catalyst Switch
 
 ### Objective:
-   - **Implement a layer 3 switch to handle inter-VLAN routing.**
+   - Implement a layer 3 switch to handle inter-VLAN routing.
 
 ---
 
@@ -13,7 +13,7 @@
 
 > <img src="../images/cisco-switch/cisco-switch.png" width="500">
 > 
-> **Price: *$90 AUD***
+> **Price:** $90 AUD
 > 
 > **Core features:**
 > 
@@ -25,7 +25,7 @@
 > 
 >> **Why layer 3?:**
 >> 
->> - *Introducing a layer 3 switch into the topology would allow for separation of responsibilities between pfSense and the switch. The switch would handle all inter-VLAN routing, while pfSense remained as a firewall.*
+>> - Introducing a layer 3 switch into the topology would allow for separation of responsibilities between pfSense and the switch. The switch would handle all inter-VLAN routing, while pfSense remained as a firewall.
 
 <br>
 
@@ -59,8 +59,8 @@
 
 **Updated VLAN assignment:**
 
-- **VLAN10 (Servers) = *192.168.110.0/24***
-- **VLAN20 (Clients) = *192.168.120.0/24***
+- **VLAN10 (Servers) =** 192.168.110.0/24
+- **VLAN20 (Clients) =** 192.168.120.0/24
 
 **Assigned VLAN names:**
 
@@ -70,7 +70,7 @@
 
 > <img src="../images/cisco-switch/vlan-svis.png" width="500">
 > 
-> - *These are the default gateways for the VLANs*
+> - These are the default gateways for the VLANs
 		
 **VLAN status:**
 
@@ -84,7 +84,7 @@
 
 ### 🟥 Problem:
 
-***The Trunk only allows for VLAN10 and VLAN20 tagged traffic, while Proxmox lives on the 192.168.20.0/24 subnet. Since all traffic that isn't tagged for VLAN10 or VLAN20 gets sent to the native VLAN (VLAN1 by default), this resulted in loss of access to Proxmox's browser UI.***
+**The trunk only allows for VLAN10 and VLAN20 tagged traffic, while Proxmox lives on the 192.168.20.0/24 subnet. Since all traffic that isn't tagged for VLAN10 or VLAN20 gets sent to the native VLAN (VLAN1 by default), this results in loss of access to Proxmox's browser UI.**
 
 ### 🟩 Solution:
 
@@ -105,9 +105,11 @@
 
 #### Why VLAN99 instead of VLAN1:
 
- - **Cisco uses VLAN1 by default for:**
- - **Control Traffic**
- - **Switch Port Assignment**
- - **Having a dedicated Management/Native VLAN is much cleaner.**
+> **Cisco uses VLAN1 by default for:**
+>
+> - Control Traffic
+> - Switch Port Assignment
+>
+> Having a dedicated Management/Native VLAN is much cleaner.
 
 
