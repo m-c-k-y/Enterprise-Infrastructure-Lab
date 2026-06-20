@@ -30,7 +30,7 @@
 
 **External *NTP* server that will be used:**
 >
-> ***time.windows.com***
+> **time.windows.com**
 >
 > - This is Microsoft's public **NTP** server
 
