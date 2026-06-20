@@ -1,6 +1,6 @@
 # VLAN Segmentation
 
-### Objective:
+### 🎯 Objective:
    - Segment servers and clients into separate VLANs
 
 ---
