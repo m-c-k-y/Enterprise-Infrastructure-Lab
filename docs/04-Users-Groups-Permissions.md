@@ -130,7 +130,7 @@
 > 
 > <img src="../images/users-groups-permissions/targeting-domain-local.png" width="500">
 > 
-> - *This ensures that only members of the corresponding **Domain Local group** would receive the mapped drives.*
+> - This ensures that only members of the corresponding **Domain Local group** would receive the mapped drives.
 
 **Mapped drives created for both the *IT* and *HR* shares:**
 
