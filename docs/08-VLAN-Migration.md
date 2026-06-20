@@ -1,7 +1,7 @@
  # VLAN Migration
 
 
-### Goal:
+### 🎯 Objective:
    - Successfully move the Domain Controller over to VLAN10 (192.168.110.0/24)
 
 ---
